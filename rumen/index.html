@@ -1,0 +1,1351 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://zh-cn.markdown.net.br/rumen/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="面向初学者的完整Markdown™教程，其中包含有关如何使用世界上最流行的标记语言的最佳实践示例。">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zh-cn.markdown.net.br/rumen/">
+    <meta property="og:title" content="Markdown®简介：基本语言概念[快速简便]">
+    <meta property="og:description" content="面向初学者的完整Markdown™教程，其中包含有关如何使用世界上最流行的标记语言的最佳实践示例。">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Markdown®简介：基本语言概念[快速简便]</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="搜索"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/rumen/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>介绍</a>
+  </li>
+  <li class="bold white">
+    <a href="/jiben-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>基本语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuozhan-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>扩展语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuaisu-cankao/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>快速参考</a>
+  </li>
+  <li class="bold white">
+    <a href="/ruanjian/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>工具</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>Markdown简介</h1>
+              <h4 class="light">Markdown开始您的旅程所需的一切。</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">Markdown简介</span>
+<meta itemprop="position" content="2" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+  <div class="col s12">
+    <h2 id="markdown">什么是Markdown？</h2>
+
+    <p>Markdown是一种用于格式化所有类型文档的标记语言，由<a href="https://daringfireball.net/projects/markdown/" target="_blank">John Gruber</a>和Aaron Swartz于2004年创建，今天它已成为程序员中最受欢迎的语言之一。</p>
+
+    <p>根据维基百科：</p>
+
+    <div class="image-container">
+    	<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-wikipedia_w615.webp 615w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w556.webp 556w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w497.webp 497w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w438.webp 438w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w379.webp 379w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w320.webp 320w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w261.webp 261w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w202.webp 202w"
+		         sizes="(max-width: 615px) 100vw, 615px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-来自Wikipedia的Markdown的定义"
+		        	title="Markdown教程-来自Wikipedia的Markdown的定义"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-wikipedia_w615.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-wikipedia_w615.png 615w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w556.png 556w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w497.png 497w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w438.png 438w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w379.png 379w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w320.png 320w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w261.png 261w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w202.png 202w"
+		         	sizes="(max-width: 615px) 100vw, 615px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-wikipedia_w615.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>维基百科上Markdown的定义</span>
+		</figcaption>
+		</figure>
+    </div>
+
+    <blockquote><strong>注</strong>：标记语言是一种使用<i> tags </ i>或符号对内容应用样式化的语言，世界上最受欢迎的标记语言是HTML，XML和Markdown。</blockquote>
+
+    <p>在下面的图像中，您可以在文本编辑器<a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a>中看到以Markdown格式格式化的文件。</p>
+
+    <div class="image-container">
+    	<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Sublime Text上Markdown格式的示例"
+		        	title="Markdown教程-Sublime Text上Markdown格式的示例"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>在Sublime Text上进行Markdown格式化的示例</span>
+		</figcaption>
+		</figure>
+    </div>
+
+    <p>Markdown或MD文件由纯文本组成，很容易理解，并且没有所有污染内容的HTML标记。</p>
+
+    <blockquote><strong>注</strong>：MD是Markdown的缩写。</blockquote>
+
+    <p>使用Markdown，您可以使用符号标记将格式添加到文档中。</p>
+
+    <p>重要的是要注意Markdown格式与某些<i> WYSIWYG </ i>编辑器使用的格式不同。</p>
+
+    <blockquote><strong>注意</strong>：WYSIWYG是<i> What You See Is What You Get </ i>的缩写。基本上，内容的格式是实时发生的，即立即可见。要了解更多信息，请查阅<a href="https://en.wikipedia.org/wiki/WYSIWYG" target="_blank">维基百科文章</a>。</blockquote>
+
+    <p>例如，在WYSIWYG编辑器Microsoft Word中，通过选择特定内容并按下特定按钮，组合键或菜单选项来进行文本格式化。</p>
+
+    <div class="image-container">
+    	<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w488.webp 488w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w416.webp 416w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w344.webp 344w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w272.webp 272w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w200.webp 200w"
+		         sizes="(max-width: 488px) 100vw, 488px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Microsoft Word窗口WYSIWYG"
+		        	title="Markdown教程-Microsoft Word窗口WYSIWYG"
+		         	src="https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w488.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w488.png 488w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w416.png 416w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w344.png 344w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w272.png 272w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w200.png 200w"
+		         	sizes="(max-width: 488px) 100vw, 488px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w488.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Microsoft Word窗口-WYSIWYG</span>
+		</figcaption>
+		</figure>
+    </div>
+
+    <p>在Markdown中，使用井号<code class="lang-text">＃</code>，星号<code class="lang-text">*</code>和下划线<code class="lang-text">_</code>等符号应用格式。</p>
+
+    <p>Markdown处理器使用此符号系统来了解将文件转换为HTML时应格式化的单词/短语。</p>
+
+    <p class="mv-40">
+	    <ins class="adsbygoogle"
+	         style="display:block; text-align:center;"
+	         data-ad-layout="in-article"
+	         data-ad-format="fluid"
+	         data-ad-client="ca-pub-3427355473051563"
+	         data-ad-slot="3854885260"></ins>
+	    <script>
+	         (adsbygoogle = window.adsbygoogle || []).push({});
+	    </script>
+    </p>
+
+    <p>例如，<code class="lang-markdown">**我希望此文本为粗体**</code>和<code class="lang-markdown">_此文本以斜体_表示</code></p>
+
+	<p>太困惑了吗？让我们简化一下。</p>
+
+	<p>当您用两个星号<code class="lang-text">**</code>包围内容时，您将以粗体突出显示它，在第二个示例中，我们使用下划线<code class="lang-text">_</code>来应用斜体。</p>
+
+	<h2 id="markdown-edit-file">如何编辑Markdown文件</h2>
+
+	<p>一个Markdown文件只不过是<code class="lang-text">文本</code>，因此任何简单的文本编辑器就足以完成任务。</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-notepad_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-在Notepad上编辑Markdown文档"
+		        	title="Markdown教程-在Notepad上编辑Markdown文档"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-notepad_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-notepad_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-notepad_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>在Notepad上编辑Markdown文档。</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>但是，考虑到有趣的是：</p>
+	<ul class="collection">
+	  <li class="collection-item green lighten-5">一个允许您将Markdown文档转换为另一种格式的编辑器。</li>
+	  <li class="collection-item yellow lighten-5">可以突出显示Markdown语法的编辑器。</li>
+	  <li class="collection-item">
+		<ins class="adsbygoogle"
+		     style="display:block; text-align:center;"
+		     data-ad-layout="in-article"
+		     data-ad-format="fluid"
+		     data-ad-client="ca-pub-3427355473051563"
+		     data-ad-slot="3854885260"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	  </li>
+	  <li class="collection-item green lighten-5">实时显示转换为HTML的编辑器</li>
+	</ul>
+
+	<p>好消息是：</p>
+	<ul class="collection">
+	  <li class="collection-item blue lighten-5">有多种Markdown应用程序可用于各种操作系统，包括Windows，Linux，Android甚至iOS的Markdown应用程序。</li>
+	  <li class="collection-item orange lighten-5">当涉及到Web时，情况变得更好，有几个站点提供免费的Markdown应用程序供您编辑文档online，最好的是，许多站点具有实时转换器，也就是说，在键入应用程序时，您将转换为HTML。</li>
+	</ul>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-text-editors_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown文本编辑器"
+		        	title="Markdown教程-Markdown文本编辑器"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-text-editors_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-text-editors_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-text-editors_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>文字编辑器并排：Notepad ++，Sublime Text和Visual Studio Code。</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<blockquote><strong>注意</strong>：值得记住的是Markdown格式非常简单，因此，使用该语言格式化的文档仍然可读。</blockquote>
+
+    <h2 id="markdown-vs-wysiwyg">Markdown和WYSIWYG</h2>
+
+	<p>如果WYSIWYG编辑器（提供实时格式）非常方便，为什么我应该使用Markdown？</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown与WYSIWYG Microsoft Word"
+		        	title="Markdown教程-Markdown与WYSIWYG Microsoft Word"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown格式和WYSIWYG格式之间的比较。</span>
+		</figcaption>
+		</figure>
+	</div>
+
+    <p>如果使用WYSIWYG编辑器，我可以按一个按钮并设置所需的格式，为什么我要输入带有Markdown标记的文档？</p>
+
+    <p>让我们看看使用Markdown的一些原因：</p>
+
+    <ul class="collection">
+		<li class="collection-item green lighten-5">Markdown可用于创建几乎任何类型的文档，包括网站，书籍，演示文稿，e-mails，技术文档等等。</li>
+		<li class="collection-item yellow lighten-5">A portabilidade do Markdown é excepcional. Por ser um documento de texto simples, esse, pode ser editado em qualquer aplicativo de texto. Se contrastarmos com o Microsoft Word, o formato <code class="lang-text">docx</code> é proprietário e necessita de programa específico para ser aberto, o que não acontece com o <code class="lang-text">md</code>.
+		</li>
+		<li class="collection-item">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</li>
+		<li class="collection-item blue lighten-5">可以在任何地方编辑"" <code class="lang-plaintext">MD</code>文件。</li>
+		<li class="collection-item green lighten-5">无论您使用哪种操作系统，Windows，Mac或Android，Markdown都是兼容的。</li>
+		<li class="collection-item yellow lighten-5">即使发生灾难，也可以访问您的文档。您喜欢的文本编辑器不再起作用了吗？支持结束了吗？程序是否已付款？没问题，只需选择其他任何文本编辑器，然后继续编辑和访问您的文档，这对于诸如技术文档，书籍和TCC之类的文件而言极为重要。</li>
+		<li class="collection-item blue lighten-5">庞大的Markdown社区已使它可以在各种网站上用作格式帖子的标准语言进行访问。 GitHub和Reddit是使用Markdown的著名站点的示例。</li>
+		<li class="collection-item">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</li>
+		<li class="collection-item green lighten-5">大量的人已经在使用Markdown，因此他们的格式化文档将被越来越多的人所理解。</li>
+  	</ul>
+
+
+  	<h2 id="markdown-practicing">练习</h2>
+
+  	<p>最好的学习方法就是练习！</p>
+
+  	<p>有趣的是，您在学习语言语法的同时可以使用Markdown编辑器。</p>
+
+  	<p>开始练习Markdown的最快方法是使用online编辑器。使用Web应用程序，您无需下载任何内容，只需访问网站并开始编辑您的<code class="lang-text">md</code>文件。</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-online-editors_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-编辑online，StackEdit，Dillinger和Editor.md"
+		        	title="Markdown教程-编辑online，StackEdit，Dillinger和Editor.md"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-online-editors_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-online-editors_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-online-editors_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>编辑online，StackEdit，Dillinger和Editor.md</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p><a href="https://stackedit.io/app" target="_blank">StackEdit</a>，<a href="https://dillinger.io/" target="_blank">Dillinger</a>和<a href="/editor/" target="_blank">Editor.md（Markeditor）</a>是开始的好选择。</p>
+
+  	<blockquote><strong>注意</strong>：在浏览器的另一个选项卡中打开一个online编辑器，以实时训练Markdown语法。</blockquote>
+
+  	<h3 id="stackedit">StackEdit</h3>
+
+  	<p><a href="https://stackedit.io/app" target="_blank">StackEdit</a>是最完整的应用程序之一。除编辑器外，它还提供了一个实时转换器，可在右侧面板中显示HTML。</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/stackedit-interface_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-StackEdit界面"
+		        	title="Markdown教程-StackEdit界面"
+		         	src="https://markdown.net.br/assets/img/intro/stackedit-interface_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/stackedit-interface_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w972.png 972w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w818.png 818w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w664.png 664w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w510.png 510w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w356.png 356w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/stackedit-interface_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown编辑器Web接口StackEdit</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p>在工具部分中查看有关<a href="/ruanjian/stackedit/" target="_blank">StackEdit</a>的更多信息。</p>
+
+  	<h3 id="dillinger">Dillinger</h3>
+
+  	<p><a href="https://dillinger.io/" target="_blank">Dillinger</a>具有非常简单的界面，但是提供了几个用于编辑Markdown文档的选项。除了实时转换，您还可以将文件导出为HTML和PDF格式</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/dillinger-interface_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Dillinger界面Web"
+		        	title="Markdown教程-Dillinger界面Web"
+		         	src="https://markdown.net.br/assets/img/intro/dillinger-interface_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/dillinger-interface_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w972.png 972w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w818.png 818w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w664.png 664w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w510.png 510w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w356.png 356w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/dillinger-interface_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown Dillinger编辑器Web界面</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p>有关Dillinger <a href="/ruanjian/dillinger/" target="_blank">单击此处</a>的更多信息。</p>
+
+  	<h3 id="editor-md">Editor.md (Markeditor)</h3>
+
+  	<p><a href="/editor/" target="_blank">Editor.md</a>是一个开放源代码工具，具有用于HTML的实时MD转换器和按钮，使您只需单击即可创建Markdown元素。</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/editor-md-interface_w1268.webp 1268w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w1115.webp 1115w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w962.webp 962w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w809.webp 809w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w656.webp 656w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w503.webp 503w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w350.webp 350w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w197.webp 197w"
+		         sizes="(max-width: 656px) 100vw, 656px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Editor.md的Web界面"
+		        	title="Markdown教程-Editor.md的Web界面"
+		         	src="https://markdown.net.br/assets/img/intro/editor-md-interface_w1268.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/editor-md-interface_w1268.png 1268w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w1115.png 1115w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w962.png 962w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w809.png 809w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w656.png 656w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w503.png 503w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w350.png 350w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w197.png 197w"
+		         	sizes="(max-width: 656px) 100vw, 656px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/editor-md-interface_w1268.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown Editor.md编辑器Web界面</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<h3 id="now-what">接着？</h3>
+
+  	<p>获得更多经验后，您可以下载适用于您操作系统的应用程序并开始在本地编辑文档。</p>
+
+  	<p>在"<a href="/工具/" target="_blank">工具</a>部分中，您将找到广泛的应用程序列表，其中包含有关如何使用它们的说明以及与Markdown元素的兼容性的信息。</p>
+
+  	<p class="mv-40">
+  	    <ins class="adsbygoogle"
+  	         style="display:block; text-align:center;"
+  	         data-ad-layout="in-article"
+  	         data-ad-format="fluid"
+  	         data-ad-client="ca-pub-3427355473051563"
+  	         data-ad-slot="3854885260"></ins>
+  	    <script>
+  	         (adsbygoogle = window.adsbygoogle || []).push({});
+  	    </script>
+  	</p>
+
+  	<p>好了，既然您已经可以使用练习Markdown的编辑器，让我们了解如何从一种格式转换为另一种格式。</p>
+
+
+  	<h2 id="markdown-convert-file">如何转换Markdown文件</h2>
+
+  	<p>让我们了解Markdown应用程序将<code class="lang-text">md</code>文件转换为另一种格式（通常为HTML或PDF）的过程。</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w517.webp 517w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w438.webp 438w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w359.webp 359w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w280.webp 280w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w201.webp 201w"
+		         sizes="(max-width: 517px) 100vw, 517px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-如何转换Markdown文件"
+		        	title="Markdown教程-如何转换Markdown文件"
+		         	src="https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w517.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w517.png 517w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w438.png 438w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w359.png 359w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w280.png 280w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w201.png 201w"
+		         	sizes="(max-width: 517px) 100vw, 517px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w517.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>如何转换Markdown文件</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<h3 id="markdown-simplicity">Markdown的简单性</h3>
+
+  	<p>您如何识别Markdown文件？通过扩展，对吗？通常是<code class="lang-text">md</code>或<code class="lang-text">markdown</code>。</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-file-extensions_w1052.webp 1052w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w930.webp 930w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w808.webp 808w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w686.webp 686w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w564.webp 564w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w442.webp 442w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w320.webp 320w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w198.webp 198w"
+		         sizes="(max-width: 686px) 100vw, 686px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown文件扩展"
+		        	title="Markdown教程-Markdown文件扩展"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-file-extensions_w1052.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-file-extensions_w1052.png 1052w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w930.png 930w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w808.png 808w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w686.png 686w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w564.png 564w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w442.png 442w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w320.png 320w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w198.png 198w"
+		         	sizes="(max-width: 686px) 100vw, 686px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-file-extensions_w1052.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown文件扩展</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p>Markdown文件是纯文本，没有格式，不是加密的文件，甚至更少，经过编译。</p>
+
+  	<blockquote><strong>注意</strong>：此简单性允许程序分析您的文本中是否有识别Markdown元素的符号。</blockquote>
+
+  	<p>除编辑器外，几个Markdown应用程序还具有集成的转换器。转换器负责将Markdown语法转换为另一种格式。</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-html-pdf_w737.webp 737w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w660.webp 660w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w583.webp 583w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w506.webp 506w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w429.webp 429w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w352.webp 352w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w275.webp 275w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w198.webp 198w"
+		         sizes="(max-width: 737px) 100vw, 737px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-从Markdown生成的文件格式化"
+		        	title="Markdown教程-从Markdown生成的文件格式化"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-html-pdf_w737.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-html-pdf_w737.png 737w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w660.png 660w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w583.png 583w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w506.png 506w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w429.png 429w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w352.png 352w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w275.png 275w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w198.png 198w"
+		         	sizes="(max-width: 737px) 100vw, 737px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-html-pdf_w737.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>从格式化的Markdown生成的文件</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<h3 id="markdown-how-conversion-works">转换如何完成</h3>
+
+  	<p>Markdown转换器使用Parser扫描其内容，以查找与Markdown兼容的标记。找到兼容标签时，Parser会检查输出格式是否匹配，例如，产生相同格式的tag HTML。</p>
+
+  	<p>您可以在下面看到Markdown标记和tag HTML之间对应关系的示例表。</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w850.webp 850w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w757.webp 757w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w571.webp 571w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w478.webp 478w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w385.webp 385w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w292.webp 292w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w199.webp 199w"
+		         sizes="(max-width: 757px) 100vw, 757px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-与HTML的Markdown语法比较-表"
+		        	title="Markdown教程-与HTML的Markdown语法比较-表"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w850.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w850.png 850w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w757.png 757w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w571.png 571w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w478.png 478w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w385.png 385w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w292.png 292w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w199.png 199w"
+		         	sizes="(max-width: 757px) 100vw, 757px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w850.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown和HTML语法之间的比较表。</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p>请注意，在转换Markdown时，HTML格式是最常用的格式之一。您可以在任何Web浏览器（例如Google Chrome，Mozilla Firefox和Microsoft Edge）中查看转换为HTML的文件。</p>
+
+  	<p>在下图中，您可以看到转换过程的简化版本。</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w500.webp 500w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w425.webp 425w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w350.webp 350w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w275.webp 275w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w200.webp 200w"
+		         sizes="(max-width: 500px) 100vw, 500px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown到HTML的转换过程"
+		        	title="Markdown教程-Markdown到HTML的转换过程"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w500.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w500.png 500w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w425.png 425w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w350.png 350w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w275.png 275w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w200.png 200w"
+		         	sizes="(max-width: 500px) 100vw, 500px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w500.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown和HTML之间如何制作封面的简单示意图。</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<blockquote><strong>注意</strong>：必须注意的是，在更强大的应用程序中，这些组件可以分开，甚至可以彼此独立。编辑器，转换器，解析器等。上图只是该过程如何发生的简单表示。</blockquote>
+
+
+  	<p>让我们分四个步骤总结一下转换。</p>
+    <ul class="collection">
+		<li class="collection-item green lighten-5">首先，我们必须创建一个Markdown文件，为此，我们在保存文档时添加了扩展名<code class="lang-text">md</code>或<code class="lang-text">markdown</code>。在编辑期间，任何文本编辑器都可以。</li>
+		<li class="collection-item yellow lighten-5">然后，我们将文件加载到Markdown应用程序中。</li>
+		<li class="collection">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</li>
+		<li class="collection-item blue lighten-5">是时候转换为另一种格式了，在我们的例子中是HTML。在此步骤中，专用于Markdown的应用程序必不可少。</li>
+		<li class="collection-item orange lighten-5">查看转换结果。如果是HTML，只需在浏览器中打开文件。</li>
+	</ul>
+
+  	<p>一些重点应突出显示</p>
+
+    <ul class="collection">
+		<li class="collection-item green lighten-5">该过程可能会有所不同，具体取决于您在哪里编辑Markdown文件。</li>
+		<li class="collection-item yellow lighten-5">当我们谈论简单编辑时，即使用任何通用编辑器时，这些步骤将更加明显。</li>
+		<li class="collection-item orange lighten-5">对于online编辑器（例如Dillinger，StackEdit和Editor.md），将步骤2、3和4直接合并到这些应用程序的图形界面中。</li>
+	</ul>
+
+	<h2 id="markdown-usage">Markdown的使用</h2>
+
+	<p>为Web创建内容是使用Markdown的最流行方法。不仅在HTML页面的生成中，而且在各种帖子的创建和编辑中，从创建简单的注释到详细的技术文档。</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/reddit-markdown-post_w806.webp 806w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w719.webp 719w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w632.webp 632w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w545.webp 545w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w458.webp 458w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w371.webp 371w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w284.webp 284w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w197.webp 197w"
+		         sizes="(max-width: 719px) 100vw, 719px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-使用Markdown发布到Reddit"
+		        	title="Markdown教程-使用Markdown发布到Reddit"
+		         	src="https://markdown.net.br/assets/img/intro/reddit-markdown-post_w806.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/reddit-markdown-post_w806.png 806w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w719.png 719w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w632.png 632w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w545.png 545w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w458.png 458w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w371.png 371w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w284.png 284w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w197.png 197w"
+		         	sizes="(max-width: 719px) 100vw, 719px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/reddit-markdown-post_w806.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>使用Markdown发布到Reddit</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>您还可以格式化任务列表，e-mails消息，购物清单等。</p>
+
+	<p>在下面，您可以看到可以使用Markdown创建的一些文档示例。</p>
+
+	<h3 id="markdown-websites">网站</h3>
+
+	<p>John Gruber和Aaron Swartz开发了有关Internet的Markdown，因此为Web创建内容已成为该语言的最大吸引力之一。</p>
+
+	<p>与Markdown兼容的许多应用程序已经自动将您的内容转换为HTML。</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-自动从Markdown转换为HTML online"
+		        	title="Markdown教程-自动从Markdown转换为HTML online"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>自动从Markdown转换为HTML</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>您可以使用Markdown格式创建完整的网站。如果您要这样做，那么<a href="/ruanjian/jekyll/" target="_blank">Jekyll</a>和<a href="/ruanjian/mkdocs/" target="_blank">MkDocs</a>之类的工具就可以满足您的需求。</p>
+
+	<p>Jekyll和MkDocs是从Markdown文档生成静态网站的工具。知道在创建网站时，有趣的是，您对HTML，CSS甚至使用Git的版本控制文件的熟悉程度降至最低。</p>
+
+    <p class="mv-40">
+	    <ins class="adsbygoogle"
+	         style="display:block; text-align:center;"
+	         data-ad-layout="in-article"
+	         data-ad-format="fluid"
+	         data-ad-client="ca-pub-3427355473051563"
+	         data-ad-slot="3854885260"></ins>
+	    <script>
+	         (adsbygoogle = window.adsbygoogle || []).push({});
+	    </script>
+    </p>
+
+	<p><a href="/ruanjian/github-pages/" target="_blank">GitHub页面</a>为您的静态网站提供免费托管。</p>
+
+	<p>如果您需要更强大的内容管理器（著名的CMS），请查看<a href="/ruanjian/ghost/" target="_blank">Ghost</a>。</p>
+
+	<p>Ghost是bloggers的免费开源平台。该工具还具有内置的Markdown编辑器。</p>
+
+	<p>您使用WordPress吗？ WordPress.com上托管的站点已经支持Markdown，即使如此，您也可以将plugin Jetpack用于其他托管服务器上的站点。</p>
+
+
+	<h3 id="markdown-formatting-text">格式化文字</h3>
+
+	<p>Markdown的简单性免除了WYSIWYG编辑器的所有浮华选项，例如Microsoft Word，但它仍然提供了足够的格式来供您编辑文档。</p>
+
+	<p>该语言还支持粗体，斜体和删除线，此外还支持列表，标题，blockquotes等。</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-syntax-output_w852.webp 852w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w759.webp 759w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w666.webp 666w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w573.webp 573w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w480.webp 480w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w387.webp 387w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w294.webp 294w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w201.webp 201w"
+		         sizes="(max-width: 759px) 100vw, 759px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown中的粗体，斜体和删除线格式"
+		        	title="Markdown教程-Markdown中的粗体，斜体和删除线格式"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-syntax-output_w852.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-syntax-output_w852.png 852w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w759.png 759w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w666.png 666w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w573.png 573w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w480.png 480w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w387.png 387w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w294.png 294w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w201.png 201w"
+		         	sizes="(max-width: 759px) 100vw, 759px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-syntax-output_w852.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown上的粗体，斜体和删除线格式</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>使用Markdown格式化文档的另一个优点是可以将它们转换为基本上任何其他文本文件格式。</p>
+
+	<p>以下是用于创建/编辑Markdown文档的应用程序列表：</p>
+
+    <ul class="collection">
+		<li class="collection-item">Windows: <a href="https://wereturtle.github.io/ghostwriter/" target="_blank">ghostwriter</a> 或者 <a href="https://markdownmonster.west-wind.com/" target="_blank">Markdown Monster</a></li>
+		<li class="collection-item">Linux: <a href="https://github.com/retext-project/retext" target="_blank">ReText</a> 或者 <a href="https://wereturtle.github.io/ghostwriter/" target="_blank">ghostwriter</a></li>
+		<li class="collection-item">Mac: <a href="/ruanjian/macdown/" target="_blank">MacDown</a>, <a href="/ruanjian/ia-writer/" target="_blank">iA Writer</a> 或者 <a href="https://marked2app.com/" target="_blank">Marked</a></li>
+		<li class="collection-item">Web: <a href="/ruanjian/dillinger/" target="_blank">Dillinger</a> 或者 <a href="https://stackedit.io/app" target="_blank">StackEdit</a></li>
+		<li class="collection-item">iOS / Android: <a href="/ruanjian/ia-writer/" target="_blank">iA Writer</a></li>
+	</ul>
+
+
+	<h3 id="markdown-note-taking">笔记</h3>
+
+	<p>Markdown是笔记的理想语言。</p>
+
+	<p>这是与Markdown兼容的应用程序的列表。</p>
+
+    <ul class="collection">
+		<li class="collection-item"><a href="/ruanjian/notable/" target="_blank">Notable</a>: 与多个平台的兼容性而突出。</li>
+		<li class="collection-item"><a href="/ruanjian/bear/" target="_blank">Bear</a>: 我们进入了Apple的领土，Bear与Mac和iOS兼容，默认情况下不使用Markdown，但是您可以激活它。 Bear与Evernote非常相似。</li>
+		<li class="collection-item">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</li>
+		<li class="collection-item"><a href="/ruanjian/simplenote/" target="_blank">Simplenote</a>: 它是免费的，很简单，并且可以存储笔记。在所有平台上均可用。</li>
+		<li class="collection-item"><a href="/ruanjian/boostnote/" target="_blank">Boostnote</a>: 除了拥有开源代码外，更着重于程序员。</li>
+	</ul>
+
+	<p>还有Evernote？ OneNote？有人...？</p>
+
+	<p>就是这样</p>
+
+	<p>在记笔记应用程序方面，无疑<a href="https://evernote.com/" target="_blank">Evernote</a>和<a href="https://www.onenote.com/" target="_blank">OneNote</a>最受欢迎。不幸的是，默认情况下，这两个程序不提供对Markdown的支持。</p>
+
+	<p>对于Evernote，可以使用<a href="/ruanjian/markdown-here/" target="_blank">Markdown Here</a>或<a href="https://marxi.co/" target="_blank">Marxico</a>。</p>
+
+	<blockquote><strong>注意</strong>：Markdown Here是浏览器的扩展，允许您使用Markdown语法创建emails。您可以在Evernote网站上使用相同的扩展名。</blockquote>
+
+	<h3 id="markdown-books">图书</h3>
+
+	<p>您使用Markdown写书是什么意思？</p>
+
+	<p>没错，<a href="https://leanpub.com/" target="_blank">Leanpub</a>之类的服务用作基本Markdown文件，转换已针对EPUB，MOBI和PDF完成。</p>
+
+	<p>不太喜欢电子书吗？</p>
+
+	<p>使用生成的电子书的文件，您可以将其上传到其他服务，例如<a href="https://kdp.amazon.com/" target="_blank">Kindle Direct Publishing</a>，并制作实物副本。</p>
+
+
+	<h3 id="markdown-slide-presentations">slides的演讲</h3>
+
+	<p>是的，您没看错，可以使用Markdown创建slides演示文稿。</p>
+
+	<p><a href="https://remarkjs.com/" target="_blank">Remark</a>，<a href="https://jdan.github.io/cleaver/" target="_blank">Cleaver</a>和<a href="https://github.com/adamzap/landslide" target="_blank">Landslide</a>是直接在您的浏览器中生成slides演示文稿的工具，所有工具均使用<code class="lang-text">md</code>文件作为基础。</p>
+
+	<p>喜欢使用应用程序？在macOS中，您可以查阅<a href="https://marked2app.com/" target="_blank">Marked</a>或<a href="https://www.decksetapp.com/" target="_blank">Deckset</a>。在Windows上，我们可以使用<a href="https://pandoc.org/" target="_blank">Pandoc</a>将Markdown转换为slides。</p>
+
+	<p>使用Markdown标记来生成演示文稿似乎看起来很浪费时间，但是，通过一些实践，您会发现，与使用<a href="https://www.microsoft.com/pt-br/microsoft-365/powerpoint" target="_blank">PowerPoint</a>或<a href="https://www.apple.com/br/keynote/" target="_blank">Keynote</a>之类的工具相比，它要容易得多且速度更快。</p>
+
+	<h3 id="markdown-emails">hphpmtmtkin</h3>
+
+	<p>大多数e-mail提供程序都将WYSIWYG编辑器集成到该界面中，但是让我们面对现实，其中许多仍然有待改进，一方面存在很多复杂性，另一方面却缺乏格式化选项。</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w973.webp 973w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w863.webp 863w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w753.webp 753w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w643.webp 643w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w533.webp 533w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w423.webp 423w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w313.webp 313w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w203.webp 203w"
+		         sizes="(max-width: 753px) 100vw, 753px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Gmail的email创建界面"
+		        	title="Markdown教程-Gmail的email创建界面"
+		         	src="https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w973.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w973.png 973w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w863.png 863w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w753.png 753w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w643.png 643w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w533.png 533w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w423.png 423w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w313.png 313w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w203.png 203w"
+		         	sizes="(max-width: 753px) 100vw, 753px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w973.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Gmail email创建界面</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>现在？</p>
+
+	<p><a href="/ruanjian/markdown-here/" target="_blank">Markdown Here</a>是这些情况的解决方案。浏览器的扩展程序，可让您使用Markdown格式编写e-mails。</p>
+
+	<p>免费？</p>
+
+	<p>是的，Markdown Here是免费的开放源代码，可将Markdown立即转换为HTML。</p>
+
+
+	<h3 id="markdown-technical-docs">技术文档</h3>
+
+	<p>Markdown和技术文档齐头并进。无数公司使用" awh"" md"文件存储其文档。</p>
+
+	<p>在Jekyll工具的支持下，<a href="https://github.com/" target="_blank">GitHub</a>将其文档迁移到Markdown。此外，GitHub是世界上最著名的档案之一，由Markdown组成。</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/github-docs_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/github-docs_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/github-docs_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/github-docs_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/github-docs_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/github-docs_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/github-docs_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/github-docs_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-GitHub文档"
+		        	title="Markdown教程-GitHub文档"
+		         	src="https://markdown.net.br/assets/img/intro/github-docs_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/github-docs_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/github-docs_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/github-docs_w972.png 972w,
+https://markdown.net.br/assets/img/intro/github-docs_w818.png 818w,
+https://markdown.net.br/assets/img/intro/github-docs_w664.png 664w,
+https://markdown.net.br/assets/img/intro/github-docs_w510.png 510w,
+https://markdown.net.br/assets/img/intro/github-docs_w356.png 356w,
+https://markdown.net.br/assets/img/intro/github-docs_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/github-docs_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>GitHub文档</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<blockquote><strong>注意</strong>：GitHub使用了一个名为GitHub-flavored Markdown的Markdown变体。</blockquote>
+
+	<p>为了创建技术文档，以下工具可以为您提供帮助：</p>
+
+    <ul class="collection">
+		<li class="collection-item"><a href="/ruanjian/jekyll/" target="_blank">Jekyll</a>: 从Markdown文件生成文档，这是GitHub页面的选择。</li>
+		<li class="collection-item"><a href="/ruanjian/mkdocs/" target="_blank">MkDocs</a>: 简单，快速且易于使用。文档的基础是.md文件，配置使用YAML文件。</li>
+		<li class="collection-item"><a href="/ruanjian/docusaurus/" target="_blank">Docusaurus</a>: 静态网站生成器，这是创建文档的最佳工具之一。 Docusaurus由Facebook开发，支持版本控制，文档搜索甚至翻译。</li>
+		<li class="collection-item"><a href="https://readthedocs.org/" target="_blank">Read The Docs</a>: 根据Markdown文件生成文档站点。</li>
+		<li class="collection-item"><a href="https://vuepress.vuejs.org/" target="_blank">VuePress</a>: 顾名思义，它与Vue有着某种联系，因为VuePress是静态网站的生成器，旨在编写技术文档。</li>
+	</ul>
+
+    <h2 id="markdown-flavors">Markdown口味</h2>
+
+    <p>想象一下以一种语言（语，发音，口音）存在的所有不同方言。即使对于讲母语的人，有时也很难理解一些东西。</p>
+
+    <div class="image-container">
+    	<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-flavors_w893.webp 893w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w794.webp 794w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w695.webp 695w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w596.webp 596w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w497.webp 497w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w398.webp 398w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w299.webp 299w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w200.webp 200w"
+		         sizes="(max-width: 695px) 100vw, 695px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown风味"
+		        	title="Markdown教程-Markdown风味"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-flavors_w893.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-flavors_w893.png 893w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w794.png 794w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w695.png 695w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w596.png 596w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w497.png 497w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w398.png 398w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w299.png 299w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w200.png 200w"
+		         	sizes="(max-width: 695px) 100vw, 695px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-flavors_w893.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown语法的变体</span>
+		</figcaption>
+		</figure>
+    </div>
+
+    <p>就像语言一样，在不同程序中Markdown的实现也可能会有所不同，即使差异很小，也可能引起混乱。</p>
+
+    <p>Markdown的变体称为Flavors，例如，GitHub使用了更强大的Markdown版本GitHub-flavored Markdown或GFM。</p>
+
+    <p>一些应用程序仅使用<a href="/jiben-yufa/" target="_blank">基本语法</a>，其他应用程序使用基本语法和<a href="/kuozhan-yufa/" target="_blank">扩展语法</a>的组合，最后，还有一些应用程序偶发地实现了这两个元素。</p>
+
+    <p>该怎么办？</p>
+
+    <p>理解应用程序的最佳方法是查阅其文档。您也可以使用旧的反复试验策略。另请参阅我们的工具列表，其中列出了Markdown的哪些元素与每个应用程序兼容。</p>
+
+    <p>最终，最好的选择是使用提供最大兼容性的程序，例如<a href="/ruanjian/dillinger/" target="_blank">Dillinger</a>或<a href="/ruanjian/stackedit/" target="_blank">StackEdit</a>。</p>
+
+    <p>Markdown风味的一些示例是：<a href="https://github.github.com/gfm/" target="_blank">GFM（GitHub-flavored Markdown）</a>； <a href="https://fletcherpenney.net/multimarkdown/" targer="_blank">MultiMarkdown</a>； <a href="https://michelf.ca/projects/php-markdown/extra/" target="_blank">Markdown Extra</a>，<a href="https://kramdown.gettalong.org/" target="_blank">Kramdown</a>。</p>
+
+    <h2 id="markdown-conclusion">结论</h2>
+
+    <p>在本文中，您学习了Markdown的基本方面，如何使用它及其不同的实现。</p>
+
+    <p>下一步是学习该语言的<a href="/jiben-yufa/">基本语法</a>，或者，如果您已经有信心，请查阅<a href="/工具/">工具</a>部分以开始使用Markdown。</p>
+  </div> <!-- FIM DO CONTEÚDO PRINCIPAL -->
+</div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>分享</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Markdown®简介：基本语言概念[快速简便]" data-hashtags="markdown" data-url="https://zh-cn.markdown.net.br/rumen/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;分享到Twitter
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://zh-cn.markdown.net.br/rumen/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;在脸书上分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://zh-cn.markdown.net.br/rumen/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;分享到Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Markdown®简介：基本语言概念[快速简便]" data-url="https://zh-cn.markdown.net.br/rumen/" data-subject="你好！好的？我发现此Markdown指南非常容易遵循，请在可能的情况下看看。希望对您有所帮助，待会见。" data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;通过电子邮件分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Markdown®简介：基本语言概念[快速简便]" data-url="https://zh-cn.markdown.net.br/rumen/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;分享到Whatsapp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Markdown®简介：基本语言概念[快速简便]" data-url="https://zh-cn.markdown.net.br/rumen/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;通过电报分享
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">跟随@CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, 版权所有。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

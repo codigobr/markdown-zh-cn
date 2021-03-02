@@ -1,0 +1,1477 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://zh-cn.markdown.net.br/kuozhan-yufa/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="✓表，✓代码块，✓脚注，✓Emojis等。完整的教程，轻松教授如何使用Markdown®的高级元素。">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zh-cn.markdown.net.br/kuozhan-yufa/">
+    <meta property="og:title" content="Markdown®Advanced：语法，用法和示例[逐步说明]">
+    <meta property="og:description" content="✓表，✓代码块，✓脚注，✓Emojis等。完整的教程，轻松教授如何使用Markdown®的高级元素。">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Markdown®Advanced：语法，用法和示例[逐步说明]</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="搜索"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/rumen/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>介绍</a>
+  </li>
+  <li class="bold white">
+    <a href="/jiben-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>基本语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuozhan-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>扩展语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuaisu-cankao/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>快速参考</a>
+  </li>
+  <li class="bold white">
+    <a href="/ruanjian/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>工具</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>扩展语法</h1>
+              <h4 class="light">基于Markdown基础的高级功能。</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">扩展语法</span>
+<meta itemprop="position" content="2" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+<div class="col s12">
+		<h2 id="overview">介绍</h2>
+
+		<p>约翰·格鲁伯（John Gruber）发布的Markdown的原始语法添加了一些用于编辑文档的基本元素，但一些用户不满意。</p>
+
+		<p>扩展语法试图通过通过新标记添加新元素来解决这种不满。</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>表，代码块，自动links生成，甚至脚注都是扩展基本Markdown语法的示例。</p>
+
+		<p>可以通过为Markdown处理器安装plugin或什至使用语言语法的较小变化来激活这些元素。</p>
+
+		<blockquote><b>注意</b>：您的Markdown应用程序很可能已经支持本文中介绍的元素，因此值得在学习本教程的同时对其中的每个元素进行测试。</blockquote>
+
+		<h2 id="markdown-flavors">Markdown口味</h2>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w860.webp 860w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w766.webp 766w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w672.webp 672w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w578.webp 578w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w484.webp 484w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w390.webp 390w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w296.webp 296w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w202.webp 202w"
+		         sizes="(max-width: 672px) 100vw, 672px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown风味"
+		        	title="Markdown教程-Markdown风味"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w860.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w860.png 860w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w766.png 766w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w672.png 672w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w578.png 578w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w484.png 484w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w390.png 390w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w296.png 296w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w202.png 202w"
+		         	sizes="(max-width: 672px) 100vw, 672px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-flavors-representation_w860.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown口味</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<p>Markdown具有几种不同的风格，即基本语言语法的变体。</p>
+
+		<p>这些变体除了支持基本语法外，还添加了丰富文档编辑的元素。</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>与Markdown兼容的应用程序经常使用以下所示的一种语言：</p>
+
+		<p><a href="https://commonmark.org/" target="_blank" rel="nofollow">CommonMark</a></p>
+		<p><a href="https://github.github.com/gfm/" target="_blank" rel="nofollow">GitHub-flavored Markdown (GFM)</a></p>
+		<p><a href="https://michelf.ca/projects/php-markdown/extra/" target="_blank" rel="nofollow">Markdown Extra</a></p>
+		<p><a href="https://rmarkdown.rstudio.com/" target="_blank" rel="nofollow">R Markdown</a></p>
+		<p><a href="https://fletcherpenney.net/multimarkdown/" target="_blank" rel="nofollow">MultiMarkdown</a></p>
+
+		<h2 id="markdown-tables">在Markdown中创建表</h2>
+
+		<p>用户可以使用Markdown表来呈现数据比较。</p>
+
+		<p>要在Markdown中创建表，我们使用破折号<code class="lang-plaintext">-</code>和竖线<code class="lang-plaintext">|</code>分隔行和列。</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>该表的第一行是构建标头的位置，该行以三个或更多破折号<code class="lang-plaintext">---</code>分隔，以便Markdown处理器理解格式。</p>
+
+		<p>列的分隔通过使用竖线<code class="lang-plaintext">|</code>完成，程序员也将其称为<em>pipe</em>。</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-table_w957.webp 957w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w849.webp 849w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w741.webp 741w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w633.webp 633w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w525.webp 525w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w417.webp 417w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w309.webp 309w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w201.webp 201w"
+		         sizes="(max-width: 741px) 100vw, 741px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown中的表格"
+		        	title="Markdown教程-Markdown中的表格"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-table_w957.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-table_w957.png 957w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w849.png 849w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w741.png 741w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w633.png 633w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w525.png 525w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w417.png 417w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w309.png 309w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-table_w201.png 201w"
+		         	sizes="(max-width: 741px) 100vw, 741px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-table_w957.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown表</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<p>下面是一个示例表：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| 标题  | 标题   |
+| ------- | -------- |
+| 文本   | 文本    |
+| 文本   | 文本    |</code></pre>
+	<a href="/bianji/?markdown=|%20%E6%A0%87%E9%A2%98%20%20|%20%E6%A0%87%E9%A2%98%20%20%20|%0D%0A|%20%2D%2D%2D%2D%2D%2D%2D%20|%20%2D%2D%2D%2D%2D%2D%2D%2D%20|%0D%0A|%20%E6%96%87%E6%9C%AC%20%20%20|%20%E6%96%87%E6%9C%AC%20%20%20%20|%0D%0A|%20%E6%96%87%E6%9C%AC%20%20%20|%20%E6%96%87%E6%9C%AC%20%20%20%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>竖线<code class="lang-plaintext">|</code>桌子末端使用的只是出于装饰目的，也就是说，您可以创建不带侧栏的桌子。</p>
+
+        <p>例子：</p>
+
+                <div class="code-example">
+	<pre class="lang-markdown"><code>标题  | 标题
+------- | --------
+文本   | 文本
+文本   | 文本</code></pre>
+	<a href="/bianji/?markdown=%E6%A0%87%E9%A2%98%20%20|%20%E6%A0%87%E9%A2%98%0D%0A%2D%2D%2D%2D%2D%2D%2D%20|%20%2D%2D%2D%2D%2D%2D%2D%2D%0D%0A%E6%96%87%E6%9C%AC%20%20%20|%20%E6%96%87%E6%9C%AC%0D%0A%E6%96%87%E6%9C%AC%20%20%20|%20%E6%96%87%E6%9C%AC" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>在HTML中呈现的输出：</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th>标题</th>
+					<th>标题</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>文本</td>
+					<td>文本</td>
+				</tr>
+				<tr>
+					<td>文本</td>
+					<td>文本</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>Markdown表中的单元格宽度可以变化。</p>
+
+        <p>例子：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| 标题 | 标题 |
+| --- | ----------- |
+| 文本 | 文本 |
+| 文本     | 文本 |</code></pre>
+	<a href="/bianji/?markdown=|%20%E6%A0%87%E9%A2%98%20|%20%E6%A0%87%E9%A2%98%20|%0D%0A|%20%2D%2D%2D%20|%20%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%20|%0D%0A|%20%E6%96%87%E6%9C%AC%20|%20%E6%96%87%E6%9C%AC%20|%0D%0A|%20%E6%96%87%E6%9C%AC%20%20%20%20%20|%20%E6%96%87%E6%9C%AC%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+        <h3 id="markdown-generating-tables">自动在Markdown中生成表</h3>
+
+        <p>Markdown在这里使文档编辑更加容易，并且创建表格可能会变得更加乏味。</p>
+
+        <p>竖线和破折号的使用可能会使某些用户不满意，因此有趣的是，我们能够自动化Markdown中的表格格式化过程。</p>
+
+        <p><b>步骤1</b>-<a href="/editor/" target="_blank">单击此处</a>打开我们的Markdown编辑器。</p>
+
+        <p><b>步骤2</b>-单击自动表格生成图标以打开选项面板。</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w678.webp 678w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w610.webp 610w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w542.webp 542w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w474.webp 474w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w406.webp 406w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w338.webp 338w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w270.webp 270w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w202.webp 202w"
+		         sizes="(max-width: 678px) 100vw, 678px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown第1部分中的生成表"
+		        	title="Markdown教程-Markdown第1部分中的生成表"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w678.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w678.png 678w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w610.png 610w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w542.png 542w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w474.png 474w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w406.png 406w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w338.png 338w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w270.png 270w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w202.png 202w"
+		         	sizes="(max-width: 678px) 100vw, 678px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-1_w678.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p><b>第3步</b>-在选项面板中：</p>
+
+        <ol>
+            <li>输入表格中的行数。</li>
+            <li>设置表中的列数。</li>
+            <li>在列中选择文本的对齐位置。</li>
+            <li>单击以确认并生成表结构。</li>
+        </ol>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w390.webp 390w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w342.webp 342w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w294.webp 294w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w246.webp 246w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w198.webp 198w"
+		         sizes="(max-width: 390px) 100vw, 390px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown第2部分中的生成表"
+		        	title="Markdown教程-Markdown第2部分中的生成表"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w390.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w390.png 390w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w342.png 342w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w294.png 294w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w246.png 246w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w198.png 198w"
+		         	sizes="(max-width: 390px) 100vw, 390px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-2_w390.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p><b>第4步</b>-填写每个单元格的值。</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w628.webp 628w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w567.webp 567w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w506.webp 506w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w445.webp 445w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w384.webp 384w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w323.webp 323w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w262.webp 262w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w201.webp 201w"
+		         sizes="(max-width: 628px) 100vw, 628px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown第3部分中的生成表"
+		        	title="Markdown教程-Markdown第3部分中的生成表"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w628.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w628.png 628w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w567.png 567w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w506.png 506w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w445.png 445w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w384.png 384w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w323.png 323w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w262.png 262w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w201.png 201w"
+		         	sizes="(max-width: 628px) 100vw, 628px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-generating-tables-3_w628.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown中的表结构自动生成。</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<h3 id="markdown-tables-alignment">结盟</h3>
+
+		<p>Markdown允许您将表格列的内容左对齐，右对齐或居中对齐。</p>
+
+		<p>要使Markdown表中的内容向左对齐，请在分隔标题行的短划线<code class="lang-plaintext">---</code>之前放置一个冒号<code class="lang-plaintext">::</code>。</p>
+
+		<p>例子：</p>
+
+
+        <div class="code-example">
+	<pre class="lang-markdown"><code>| 水果  | 蔬菜 | 蔬菜 |
+| :---    | :----    | :---    |
+| 腰果    | 水芹   | 萝卜 |
+| 苹果    | 西兰花 | 豌豆 |</code></pre>
+	<a href="/bianji/?markdown=|%20%E6%B0%B4%E6%9E%9C%20%20|%20%E8%94%AC%E8%8F%9C%20|%20%E8%94%AC%E8%8F%9C%20|%0D%0A|%20:%2D%2D%2D%20%20%20%20|%20:%2D%2D%2D%2D%20%20%20%20|%20:%2D%2D%2D%20%20%20%20|%0D%0A|%20%E8%85%B0%E6%9E%9C%20%20%20%20|%20%E6%B0%B4%E8%8A%B9%20%20%20|%20%E8%90%9D%E5%8D%9C%20|%0D%0A|%20%E8%8B%B9%E6%9E%9C%20%20%20%20|%20%E8%A5%BF%E5%85%B0%E8%8A%B1%20|%20%E8%B1%8C%E8%B1%86%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>结果为HTML：</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: left">水果</th>
+					<th style="text-align: left">蔬菜</th>
+					<th style="text-align: left">蔬菜</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: left">腰果</td>
+					<td style="text-align: left">水芹</td>
+					<td style="text-align: left">萝卜</td>
+				</tr>
+				<tr>
+					<td style="text-align: left">苹果</td>
+					<td style="text-align: left">西兰花</td>
+					<td style="text-align: left">豌豆</td>
+				</tr>
+			</tbody>
+		</table>
+
+        <blockquote><b>注</b>：使用冒号将文本向左对齐是可选的，因为默认情况下表格内容已在该位置对齐。</blockquote>
+
+		<p>要将文本在Markdown表中向右对齐，请在分隔标题行的短划线<code class="lang-plaintext">---</code>之后插入冒号<code class="lang-plaintext">：</code>。</p>
+
+		<p>例子：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| 水果  | 蔬菜 | 蔬菜 |
+|    ---: |    ----: |    ---: |
+| 腰果    | 水芹   | 萝卜 |
+| 苹果    | 西兰花 | 豌豆 |</code></pre>
+	<a href="/bianji/?markdown=|%20%E6%B0%B4%E6%9E%9C%20%20|%20%E8%94%AC%E8%8F%9C%20|%20%E8%94%AC%E8%8F%9C%20|%0D%0A|%20%20%20%20%2D%2D%2D:%20|%20%20%20%20%2D%2D%2D%2D:%20|%20%20%20%20%2D%2D%2D:%20|%0D%0A|%20%E8%85%B0%E6%9E%9C%20%20%20%20|%20%E6%B0%B4%E8%8A%B9%20%20%20|%20%E8%90%9D%E5%8D%9C%20|%0D%0A|%20%E8%8B%B9%E6%9E%9C%20%20%20%20|%20%E8%A5%BF%E5%85%B0%E8%8A%B1%20|%20%E8%B1%8C%E8%B1%86%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>结果为HTML：</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: right">水果</th>
+					<th style="text-align: right">蔬菜</th>
+					<th style="text-align: right">蔬菜</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: right">腰果</td>
+					<td style="text-align: right">水芹</td>
+					<td style="text-align: right">萝卜</td>
+				</tr>
+				<tr>
+					<td style="text-align: right">苹果</td>
+					<td style="text-align: right">西兰花</td>
+					<td style="text-align: right">豌豆</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>要将列内容与Markdown表中的中心对齐，请在分隔标题行的破折号之前和之后添加冒号<code class="lang-plaintext">：</code>。</p>
+
+		<p>例子：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| 水果  | 蔬菜 | 蔬菜 |
+|  :---:  |  :----:  |  :---:  |
+| 腰果    | 水芹   | 萝卜 |
+| 苹果    | 西兰花 | 豌豆 |</code></pre>
+	<a href="/bianji/?markdown=|%20%E6%B0%B4%E6%9E%9C%20%20|%20%E8%94%AC%E8%8F%9C%20|%20%E8%94%AC%E8%8F%9C%20|%0D%0A|%20%20:%2D%2D%2D:%20%20|%20%20:%2D%2D%2D%2D:%20%20|%20%20:%2D%2D%2D:%20%20|%0D%0A|%20%E8%85%B0%E6%9E%9C%20%20%20%20|%20%E6%B0%B4%E8%8A%B9%20%20%20|%20%E8%90%9D%E5%8D%9C%20|%0D%0A|%20%E8%8B%B9%E6%9E%9C%20%20%20%20|%20%E8%A5%BF%E5%85%B0%E8%8A%B1%20|%20%E8%B1%8C%E8%B1%86%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>结果为HTML：</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: center">水果</th>
+					<th style="text-align: center">蔬菜</th>
+					<th style="text-align: center">蔬菜</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: center">腰果</td>
+					<td style="text-align: center">水芹</td>
+					<td style="text-align: center">萝卜</td>
+				</tr>
+				<tr>
+					<td style="text-align: center">苹果</td>
+					<td style="text-align: center">西兰花</td>
+					<td style="text-align: center">豌豆</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>可以合并对齐格式，因为这只会影响列内的内容。</p>
+
+		<p>例子：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| 水果  | 蔬菜 | 蔬菜 |
+| :---    |  :----:  |    ---: |
+| 腰果    | 水芹   | 萝卜 |
+| 苹果    | 西兰花 | 豌豆 |</code></pre>
+	<a href="/bianji/?markdown=|%20%E6%B0%B4%E6%9E%9C%20%20|%20%E8%94%AC%E8%8F%9C%20|%20%E8%94%AC%E8%8F%9C%20|%0D%0A|%20:%2D%2D%2D%20%20%20%20|%20%20:%2D%2D%2D%2D:%20%20|%20%20%20%20%2D%2D%2D:%20|%0D%0A|%20%E8%85%B0%E6%9E%9C%20%20%20%20|%20%E6%B0%B4%E8%8A%B9%20%20%20|%20%E8%90%9D%E5%8D%9C%20|%0D%0A|%20%E8%8B%B9%E6%9E%9C%20%20%20%20|%20%E8%A5%BF%E5%85%B0%E8%8A%B1%20|%20%E8%B1%8C%E8%B1%86%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>结果为HTML：</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: left">水果</th>
+					<th style="text-align: center">蔬菜</th>
+					<th style="text-align: right">蔬菜</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: left">腰果</td>
+					<td style="text-align: center">水芹</td>
+					<td style="text-align: right">萝卜</td>
+				</tr>
+				<tr>
+					<td style="text-align: left">苹果</td>
+					<td style="text-align: center">西兰花</td>
+					<td style="text-align: right">豌豆</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>值得注意的是，分隔表标题的行的破折号<code class="lang-plaintext">---</code>与Markdown处理器无关，实际上要考虑的是冒号<code class="lang-plaintext">的位置：</code>。</p>
+
+		<p>在下面的示例中，破折号<code class="lang-plaintext">---</code>位于列的左侧，对齐方式均匀进行。</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>| 水果  | 蔬菜 | 蔬菜 |
+| :---    | :----:   | ---:    |
+| 腰果    | 水芹   | 萝卜 |
+| 苹果    | 西兰花 | 豌豆 |</code></pre>
+	<a href="/bianji/?markdown=|%20%E6%B0%B4%E6%9E%9C%20%20|%20%E8%94%AC%E8%8F%9C%20|%20%E8%94%AC%E8%8F%9C%20|%0D%0A|%20:%2D%2D%2D%20%20%20%20|%20:%2D%2D%2D%2D:%20%20%20|%20%2D%2D%2D:%20%20%20%20|%0D%0A|%20%E8%85%B0%E6%9E%9C%20%20%20%20|%20%E6%B0%B4%E8%8A%B9%20%20%20|%20%E8%90%9D%E5%8D%9C%20|%0D%0A|%20%E8%8B%B9%E6%9E%9C%20%20%20%20|%20%E8%A5%BF%E5%85%B0%E8%8A%B1%20|%20%E8%B1%8C%E8%B1%86%20|" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>结果为HTML：</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead>
+				<tr>
+					<th style="text-align: left">水果</th>
+					<th style="text-align: center">蔬菜</th>
+					<th style="text-align: right">蔬菜</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: left">腰果</td>
+					<td style="text-align: center">水芹</td>
+					<td style="text-align: right">萝卜</td>
+				</tr>
+				<tr>
+					<td style="text-align: left">苹果</td>
+					<td style="text-align: center">西兰花</td>
+					<td style="text-align: right">豌豆</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<blockquote><b>注意</b>：表标题的内容也将根据冒号的位置对齐。</blockquote>
+
+		<h3 id="markdown-tables-text-formatting">格式化表格中的文字</h3>
+
+		<p>您可以在表中插入Markdown的一些基本元素。</p>
+
+		<p>允许使用的一些格式包括：创建links，以粗体或斜体强调内容并将文本突出显示为代码，但是仅接受在线代码，即，在使用反引号<code class="lang-plaintext">`</code>的开头和结尾处进行创建。</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>标题，代码块，blockquotes，列表，水平线，图像和tags HTML不起作用。</p>
+
+		<blockquote><b>注意</b>：您甚至可以找到接受将上述元素插入到表中的应用程序，但这会损害文档的可移植性，因为其他程序不支持该文件。</blockquote>
+
+
+		<h3 id="escaping-vertical-bars">转义桌子上的竖线</h3>
+
+		<p>您已经了解到，要分隔表的各列，我们使用竖线<code class="lang-plaintext">|</code>。</p>
+
+		<p>现在，如果您打算在单元格中显示与内容相同的字符，则需要使用HTML编码: <code class="lang-plaintext">&amp;#124;</code>.</p>
+
+		<p>Ao converter o seu documento para um outro formato, o código <code class="lang-plaintext">&amp;#124;</code> se transformará em uma barra vertical <code class="lang-plaintext">|</code>.</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w963.webp 963w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w854.webp 854w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w745.webp 745w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w636.webp 636w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w527.webp 527w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w418.webp 418w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w309.webp 309w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w200.webp 200w"
+		         sizes="(max-width: 745px) 100vw, 745px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-在Markdown中转义表格内的竖线"
+		        	title="Markdown教程-在Markdown中转义表格内的竖线"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w963.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w963.png 963w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w854.png 854w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w745.png 745w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w636.png 636w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w527.png 527w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w418.png 418w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w309.png 309w,
+https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w200.png 200w"
+		         	sizes="(max-width: 745px) 100vw, 745px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/escaping-vertical-bar-markdown_w963.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>在Markdown处转义桌子内的竖线</span>
+		</figcaption>
+		</figure>
+        </div>
+
+
+		<h2 id="fenced-code-block">围栏代码块</h2>
+
+		<p>环绕的代码块允许您创建代码表示形式，而不必在四个空格或制表符中缩进一行，此外，它还允许您定义该块表示的编程语言，从而可以应用适当的语法突出显示。</p>
+
+		<p>要创建被Markdown包围的代码块，请在内容之前放置三个引号<code class="lang-plaintext">`</code>"，在内容之后放置三个引号<code class="lang-plaintext">```</code>。</p>
+
+		<p>例子：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>```
+{
+  "姓名": "Robert",
+  "姓": "Salles",
+  "年龄": 25
+}
+```</code></pre>
+	<a href="/bianji/?markdown=```%0D%0A{%0D%0A%20%20%22%E5%A7%93%E5%90%8D%22:%20%22Robert%22%2C%0D%0A%20%20%22%E5%A7%93%22:%20%22Salles%22%2C%0D%0A%20%20%22%E5%B9%B4%E9%BE%84%22:%2025%0D%0A}%0D%0A```" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>呈现的输出如下所示：</p>
+
+		<pre class="lang-javascript"><code>{
+  "姓名": "Robert",
+  "姓": "Salles",
+  "年龄": 25
+}</code></pre>
+
+		<blockquote><b>注意</b>：一些Markdown处理器允许您使用图块<code class="lang-plaintext">~~~</code>代替反引号来形成代码块。</blockquote>
+
+		<p>另请参见：<a href="/jiben-yufa/#escaping-backticks">如何在代码块中转义主干</a>。</p>
+
+		<h2 id="markdown-sintax-highlighting">语法高亮</h2>
+
+		<p>许多JavaScript库用于突出显示代码块，例如: <a href="https://prismjs.com/" target="_blank">Prism.js</a> & <a href="https://highlightjs.org/" target="_blank">highlight.js</a>.</p>
+
+		<p>他们采用特定的tag HTML，通常是tag <code class="lang-plaintext">pre</code>或tag <code class="lang-plaintext">code</code>，并根据代码块的编程语言的语法来突出显示。</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>语言语法通常由tag参数class定义，例如：</p>
+
+		<pre class="lang-html"><code>&lt;code class="lang-markdown"&gt;&lt;/code&gt;</code></pre>
+
+		<p>使用类<code class="lang-plaintext">lang-markdown</code>，框架将知道tags <代码 class="lang-plaintext">代码</代码>之间的内容应根据Markdown语言突出显示。</p>
+
+		<blockquote><b>注意</b>：高亮显示的应用程序甚至可以自动进行，某些工具具有自动检测编程语言的能力，而无需在参数class中进行定义。</blockquote>
+
+		<p>在使用Markdown构建代码块时，您可以在前三个反引号<code class="lang-plaintext">```</code>开头之后指定编程语言。</p>
+
+		<p>例子：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>```json
+{
+  "姓名": "Robert",
+  "姓": "Salles",
+  "年龄": 25
+}
+```</code></pre>
+	<a href="/bianji/?markdown=```json%0D%0A{%0D%0A%20%20%22%E5%A7%93%E5%90%8D%22:%20%22Robert%22%2C%0D%0A%20%20%22%E5%A7%93%22:%20%22Salles%22%2C%0D%0A%20%20%22%E5%B9%B4%E9%BE%84%22:%2025%0D%0A}%0D%0A```" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>与该块的第一行一样，在指定了三个打开的​​主干之后<code class="lang-plaintext">json</code>，代码将相应地突出显示：</p>
+
+		<pre class="lang-javascript"><code>{
+  "姓名": "Robert",
+  "姓": "Salles",
+  "年龄": 25
+}</code></pre>
+		<blockquote><b>注意</b>：仅当您使用执行此类任务的JavaScript库（仅HTML本身）不突出显示代码时，代码才会突出显示。</blockquote>
+
+		<h2 id="markdown-footnotes">脚注</h2>
+
+		<p>Markdown上的脚注允许用户创建对文档中提到的任何概念的引用。</p>
+
+		<p>通常，这些脚注位于文档的末尾，但是在Markdown中，您可以在文本中的任何位置定义它们。</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>创建脚注时，将以link的形式插入上标编号，将其插入到您创建的位置，当用户单击该idsihablep时，将直接将其带到包含注释参考的位置。</p>
+
+		<p>创建脚注的语法分为两部分。</p>
+
+		<p>第一部分代表包含link的数字，并使用方括号，尖号和标识符创建，例如: <code class="lang-plaintext">[^1]</code>.</p>
+
+		<p>标识符可以包含数字和字母，但不接受空格或制表符。</p>
+
+		<p>第二部分介绍了引用本身的内容，使用方括号，尖号后跟相同的标识符（您之前创建的标识符），冒号，空格和文本（示例）创建引用: <code class="lang-plaintext">[^1]: 我的脚注</code>.</p>
+
+		<pre class="lang-markdown"><code>这是一个简单的脚注[^1]. 这是一个更详细的脚注[^bignote].
+
+[^1]: 这是第一个脚注。
+
+[^bignote]: 这是一个包含几个段落和代码的代码。
+
+    缩进段落以将其包括在脚注中。
+
+    `{ 我的密码 }`
+
+    添加任意数量的段落。</code></pre>
+
+		<p>HTML中的重编看起来像这样：</p>
+
+		<p>这是一个简单的脚注<sup id="fnref:1" role="doc-noteref"><a href="#fn:1">1</a></sup>. 这是一个更详细的脚注<sup id="fnref:bignote"><a href="#fn:bignote">2</a></sup>.</p>
+
+		<div class="footnotes">
+			<ol>
+				<li id="fn:1">
+					<p>这是第一个脚注。 <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+				</li>
+				<li id="fn:bignote">
+					<p>这是一个包含几个段落和代码的代码。</p>
+
+					<p>缩进段落以将其包括在脚注中。</p>
+
+					<p><code class="language-plaintext">{ 我的密码 }</code></p>
+
+					<p>添加任意数量的段落。 <a href="#fnref:bignote">&#8617;</a></p>
+				</li>
+			</ol>
+		</div>
+
+		<blockquote><b>注</b>：页脚的内容可以放置在文档中的任何位置，但其他Markdown元素（例如表，列表和代码块）除外。</blockquote>
+
+		<blockquote><b>注</b>：脚注将始终按顺序编号，无论您创建的标识符如何，音符序列[^ 35]，[^ yyyy]和[^ 102_444]都将呈现为1、2和3。</blockquote>
+
+		<h2 id="markdown-title-id">将ID或Class添加到Markdown元素</h2>
+
+		<p>当我们在HTML中创建tags时，可以通过参数<code class="lang-plaintext">id</code>和<code class="lang-plaintext">class</code>为它们分配唯一标识和通用标识。</p>
+
+		<p>例子：</p>
+
+		<pre class="lang-html"><code>&lt;h2 id="special-title"&gt;&lt;/h2&gt;</code> & <code class="lang-html">&lt;p class="bg-blue"&gt;&lt;/p&gt;</code></pre>
+
+		<p>使用<code class="lang-plaintext">id</code>，我们可以获得特定元素的特定引用，通常该元素的id在HTML标记内是唯一的。</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>参数<code class="lang-plaintext">class</code>是通用的，可以分配给几个元素。</p>
+
+		<p><code class="lang-plaintext">id</code>或<code class="lang-plaintext">class</code>的功能是允许您通过JavaScript或CSS轻松识别这些元素，使用此<code class="lang-plaintext">id</code>或此<code class="lang-plaintext">class</code>我们可以处理属性例如颜色，大小，位置等</p>
+
+		<p>要将<code class="lang-plaintext">id</code>或<code class="lang-plaintext">class</code>添加到Markdown元素，请在该元素的内容之后打开花括号<code class="lang-plaintext">{</code>，在其后加上一个井号<code class="lang-plaintext">＃</code>表示<code class="lang-plaintext">id</code>或"。指示<code class="lang-plaintext">class</code>，然后是标识符本身，最后，关闭括号<code class="lang-plaintext">}</code>。</p>
+
+		<p>例子：</p>
+
+		<pre class="lang-markdown"><code>### 我的头衔 {#identifier}
+
+我的段落{.my-class}</code></pre>
+
+                  <p>HTML看起来像这样：</p>
+
+                  <pre class="lang-html"><code>&lt;h3 id="identifier"&gt;我的头衔&lt;/h3&gt;
+
+&lt;p class=&quot;my-class&quot;&gt;我的段落&lt;/p&gt;</code></pre>
+
+			<blockquote><b>注意</b>：请注意，并非所有Markdown应用程序都支持参数<code class="lang-plaintext">id</code>或<code class="lang-plaintext">class</code>的插入，因此始终重要的一点是查阅程序文档。</blockquote>
+
+		<h3 id="markdown-linking-to-id">Markdown的Links到ids</h3>
+
+		<p>使用用于创建links <code class="lang-plaintext">[]（）</code>的相同标准语法，我们可以在文档本身中将直接引用链接到id。</p>
+
+		<p>在放置URL的括号内，插入元素的id，并在其前加上井号<code class="lang-plaintext">＃</code>。</p>
+
+		<table class="table table-bordered responsive-table">
+			<thead class="thead-light">
+				<tr>
+					<th>Markdown</th>
+					<th>HTML</th>
+					<th>Resultado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>[标题ID](#markdown-title-id)</td>
+					<td>&lt;a href="#markdown-title-id"&gt;标题ID&lt;/a&gt;</td>
+					<td><a href="#markdown-title-id">标题ID</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>如果<code class="lang-plaintext">id</code>在另一个文档中，则格式类似，但是，在识别之前，将页面的URL放入。</p>
+
+		<p>例子：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>[标头ID](https://markdown.net.br/sintaxe-estendida#markdown-title-id)</code></pre>
+	<a href="/bianji/?markdown=[%E6%A0%87%E5%A4%B4ID]%28https:%2F%2Fmarkdown%2Enet%2Ebr%2Fsintaxe%2Destendida%23markdown%2Dtitle%2Did%29" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<h2 id="markdown-definition-lists">定义清单</h2>
+
+		<p>HTML中的定义列表由tags <code class="lang-plaintext">dl</code>和<code class="lang-plaintext">dt</code>表示。此列表以概念的方式表示术语及其解释。</p>
+
+		<p>要使用Markdown创建定义列表，请在一行上键入术语，然后按键<code class="lang-plaintext">Enter</code>，冒号，空格和术语的定义。</p>
+
+		<p>例子：</p>
+
+		<pre class="lang-markdown"><code>第一学期
+: 这是第一项的定义。
+
+第二期
+: 这是第二项的定义。
+: 这是第二项的另一个定义。</code></pre>
+
+		<p>HTML看起来像这样：</p>
+
+		<pre class="lang-html"><code>&lt;dl&gt;
+  &lt;dt&gt;第一学期&lt;/dt&gt;
+  &lt;dd&gt;这是第一个名词的定义.&lt;/dd&gt;
+  &lt;dt&gt;第二期&lt;/dt&gt;
+  &lt;dd&gt;这是第二项的定义。 &lt;/dd&gt;
+  &lt;dd&gt;这是第二项的另一个定义。&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+		<p>结果是：</p>
+
+		<dl>
+			<dt>第一学期</dt>
+			<dd>这是第一项的定义。</dd>
+			<dt>第二期</dt>
+			<dd>这是第二项的定义。 </dd>
+			<dd>这是第二项的另一个定义。</dd>
+		</dl>
+
+		<h2 id="markdown-strikethrough">Markdown的删除线</h2>
+
+		<p>删除线用于比较地纠正错误，通常在同一行上进行纠正。</p>
+
+		<p>删除线不过是在一条内容中间插入一条水平线的格式。</p>
+
+		<p class="mv-40">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</p>
+
+		<p>要在Markdown中标记内容，请在要格式化的文本前后使用两个图块<code class="lang-plaintext">~~</code>。</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>Markdown是: ~~难的~~ 简单易学.</code></pre>
+	<a href="/bianji/?markdown=Markdown%E6%98%AF:%20~~%E9%9A%BE%E7%9A%84~~%20%E7%AE%80%E5%8D%95%E6%98%93%E5%AD%A6%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>结果是这样的：</p>
+
+		<p>Markdown是: <del>难的</del> 简单易学.</p>
+
+		<h2 id="markdown-task-lists">Markdown中的任务列表</h2>
+
+		<p>Markdown中的任务列表允许用户使用方括号<code class="lang-plaintext">[]</code>创建带有左侧复选框的元素序列。</p>
+
+		<p>在处理列表时，必须以破折号<code class="lang-plaintext">-</code>开始该行。</p>
+
+		<p>要将任务标记为已完成，请将<code class="lang-plaintext">x</code>放在方括号<code class="lang-plaintext">[x]</code>内。</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>- [x] Lorem ipsum dolor sit amet
+- [ ] Lorem consectetur adipisicing elit
+- [ ] Lorem ut labore et dfolore</code></pre>
+	<a href="/bianji/?markdown=%2D%20[x]%20Lorem%20ipsum%20dolor%20sit%20amet%0D%0A%2D%20[%20]%20Lorem%20consectetur%20adipisicing%20elit%0D%0A%2D%20[%20]%20Lorem%20ut%20labore%20et%20dfolore" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>呈现的输出如下所示：</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w820.webp 820w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w731.webp 731w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w642.webp 642w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w553.webp 553w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w464.webp 464w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w375.webp 375w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w286.webp 286w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w197.webp 197w"
+		         sizes="(max-width: 731px) 100vw, 731px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown中的任务列表"
+		        	title="Markdown教程-Markdown中的任务列表"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w820.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w820.png 820w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w731.png 731w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w642.png 642w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w553.png 553w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w464.png 464w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w375.png 375w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w286.png 286w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w197.png 197w"
+		         	sizes="(max-width: 731px) 100vw, 731px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-task-list_w820.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown中的任务列表</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<h2 id="emojis">在Markdown文档中插入Emojis</h2>
+
+		<p>是的，您可以直接在文档的Markdown格式中插入著名的emoticons。</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w750.webp 750w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w671.webp 671w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w592.webp 592w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w513.webp 513w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w434.webp 434w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w355.webp 355w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w276.webp 276w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w197.webp 197w"
+		         sizes="(max-width: 750px) 100vw, 750px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown上的Emojis"
+		        	title="Markdown教程-Markdown上的Emojis"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w750.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w750.png 750w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w671.png 671w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w592.png 592w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w513.png 513w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w434.png 434w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w355.png 355w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w276.png 276w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w197.png 197w"
+		         	sizes="(max-width: 750px) 100vw, 750px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-emojis_w750.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown上的Emojis</span>
+		</figcaption>
+		</figure>
+        </div>
+
+		<p>任务有两种最常用的方法，将表情符号复制并粘贴到内容中或输入表情符号代码。</p>
+
+		<p>我们将更好地了解这两个过程的工作方式，但首先，请单击"单击此处"以打开Markdown编辑器并实时测试Emojis。</p>
+
+		<h3 id="emojis-copy-and-paste">在Markdown上复制和粘贴Emojis</h3>
+
+        <p><b>步骤1</b>-打开包含微笑的emoticon的此<a href="https://emojipedia.org/grinning-face-with-big-eyes/" target="_blank">Emojipedia</a>页面，然后单击<code class="lang-text">Copy</code>按钮。</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w1017.webp 1017w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w900.webp 900w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w783.webp 783w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w666.webp 666w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w549.webp 549w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w432.webp 432w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w315.webp 315w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w198.webp 198w"
+		         sizes="(max-width: 666px) 100vw, 666px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-将Emojis复制到Markdown第1部分"
+		        	title="Markdown教程-将Emojis复制到Markdown第1部分"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w1017.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w1017.png 1017w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w900.png 900w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w783.png 783w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w666.png 666w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w549.png 549w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w432.png 432w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w315.png 315w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w198.png 198w"
+		         	sizes="(max-width: 666px) 100vw, 666px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-1_w1017.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p><b>步骤2</b>-返回到Markdown编辑器，单击左侧面板上的[a1]，然后按[CTRL + V]进行粘贴。</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w686.webp 686w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w617.webp 617w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w548.webp 548w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w479.webp 479w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w410.webp 410w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w341.webp 341w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w272.webp 272w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w203.webp 203w"
+		         sizes="(max-width: 686px) 100vw, 686px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-将Emojis复制到Markdown第2部分"
+		        	title="Markdown教程-将Emojis复制到Markdown第2部分"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w686.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w686.png 686w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w617.png 617w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w548.png 548w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w479.png 479w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w410.png 410w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w341.png 341w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w272.png 272w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w203.png 203w"
+		         	sizes="(max-width: 686px) 100vw, 686px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-copying-emojis-2_w686.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <blockquote><b>注意</b>：您可以浏览<a href="https://emojipedia.org/" target="_blank">Emojipedia</a>以找到自己喜欢的表情符号，所有对象的复制和粘贴过程均相同。</blockquote>
+
+		<p>如果您的Markdown应用程序兼容，您将在文本中直接看到emoticon表示形式。</p>
+		<p>将Markdown文档转换为HTML甚至PDF时，表情符号仍可以正确表示。</p>
+		<blockquote><b>注意</b>：如果HTML文档未按照应有的方式呈现表情符号，请以UTF-8编码页面。</blockquote>
+
+
+		<h3 id="emojis-access-code">使用Emoji访问代码</h3>
+
+		<p>通过识别冒号包围的emoticon，可以形成表情符号代码。</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>我去露营！ :tent: 我很快回来。
+
+这太有趣了！ :joy:</code></pre>
+	<a href="/bianji/?markdown=%E6%88%91%E5%8E%BB%E9%9C%B2%E8%90%A5%EF%BC%81%20:tent:%20%E6%88%91%E5%BE%88%E5%BF%AB%E5%9B%9E%E6%9D%A5%E3%80%82%0D%0A%0D%0A%E8%BF%99%E5%A4%AA%E6%9C%89%E8%B6%A3%E4%BA%86%EF%BC%81%20:joy:" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>呈现的输出如下所示：</p>
+
+		<p>我去露营！ ⛺ 我很快回来。</p>
+
+		<p>这太有趣了！ 😂</p>
+
+        <h3 id="emoji-discovering-access-code">发现Emojis访问代码</h3>
+
+        <p>如果您不知道表情符号访问代码，请使用我们的Markdown编辑器进行查找。</p>
+
+        <p><b>步骤1</b>-<a href="/editor/" target="_blank">单击此处</a>以打开Markeditor。</p>
+
+        <p><b>步骤2</b>-单击工具栏上的Emojis插入按钮。</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w594.webp 594w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w495.webp 495w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w396.webp 396w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w297.webp 297w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w198.webp 198w"
+		         sizes="(max-width: 594px) 100vw, 594px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-在Markdown第1部分中发现Emoji代码"
+		        	title="Markdown教程-在Markdown第1部分中发现Emoji代码"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w594.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w594.png 594w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w495.png 495w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w396.png 396w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w297.png 297w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w198.png 198w"
+		         	sizes="(max-width: 594px) 100vw, 594px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-1_w594.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p><b>第3步</b>-在Emoji选择窗口中：</p>
+        <ol>
+            <li>选择要从中获取Emojis的来源。</li>
+            <li>单击将插入文档中的Emoji（您可以在同一窗口中单击多个Emojis）。</li>
+            <li>按下确认按钮以将图像的访问代码放置在文本中。</li>
+        </ol>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w825.webp 825w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w736.webp 736w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w647.webp 647w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w558.webp 558w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w469.webp 469w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w380.webp 380w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w291.webp 291w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w202.webp 202w"
+		         sizes="(max-width: 736px) 100vw, 736px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-在Markdown第2部分中发现Emoji代码"
+		        	title="Markdown教程-在Markdown第2部分中发现Emoji代码"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w825.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w825.png 825w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w736.png 736w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w647.png 647w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w558.png 558w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w469.png 469w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w380.png 380w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w291.png 291w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w202.png 202w"
+		         	sizes="(max-width: 736px) 100vw, 736px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-2_w825.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+        <p>在左侧面板中，您可以查看Emojis代码，而在右侧面板中，可以查看渲染。</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w849.webp 849w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w756.webp 756w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w663.webp 663w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w570.webp 570w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w477.webp 477w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w384.webp 384w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w291.webp 291w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w198.webp 198w"
+		         sizes="(max-width: 756px) 100vw, 756px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-在Markdown第3部分中发现Emoji代码"
+		        	title="Markdown教程-在Markdown第3部分中发现Emoji代码"
+		         	src="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w849.png"
+		         	srcset="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w849.png 849w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w756.png 756w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w663.png 663w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w570.png 570w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w477.png 477w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w384.png 384w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w291.png 291w,
+https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w198.png 198w"
+		         	sizes="(max-width: 756px) 100vw, 756px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/extended-syntax/markdown-inserting-emojis-3_w849.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+        </div>
+
+		<blockquote><b>注意</b>：emoticons的图像因应用程序而异，[a1]在此列表中，您可以找到GitHub使用的Markdown兼容表情符号，可以在您的应用程序中对其进行测试以了解是否存在是兼容性。</blockquote>
+
+
+		<h2 id="markdown-auto-link">来自Markdown中URL的自动Link</h2>
+
+		<p>一些Markdown处理器在发现小于<code class="lang-plaintext"><</code>和大于<code class="lang-plaintext">></code>符号之间的地址时，将URL转换为links。</p>
+
+		<p>例子：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>&lt;https://markdown.net.br&gt;</code></pre>
+	<a href="/bianji/?markdown=<https:%2F%2Fmarkdown%2Enet%2Ebr>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>Em outras ocasiões, embutir o endereço entre <code class="lang-plaintext">&lt;&gt;</code> é dispensável, ou seja, basta inserir a URL no próprio documento que o aplicativo fará a conversão automaticamente.</p>
+
+		<p>例子：</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>https://markdown.net.br</code></pre>
+	<a href="/bianji/?markdown=https:%2F%2Fmarkdown%2Enet%2Ebr" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>呈现的输出如下所示：</p>
+
+		<p><a href="https://markdown.net.br" target="_blank">https://markdown.net.br</a></p>
+
+		<h2 id="markdown-disable-auto-link">禁用URL自动链接</h2>
+
+		<p>如果只想在文档中表示URL并阻止应用程序将其自动转换为link，请将该地址括在反引号<code class="lang-plaintext">``</code>中。</p>
+
+		<div class="code-example">
+	<pre class="lang-markdown"><code>`https://markdown.net.br`</code></pre>
+	<a href="/bianji/?markdown=`https:%2F%2Fmarkdown%2Enet%2Ebr`" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+		<p>呈现的输出如下所示：</p>
+
+		<pre class="lang-plaintext"><code>https://markdown.net.br</code></pre>
+
+		<blockquote><b>注意</b>：值得记住的是，使用反引号将内容引起来将其转换为代码。</blockquote>
+	</div>
+</div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>分享</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Markdown®Advanced：语法，用法和示例[逐步说明]" data-hashtags="markdown" data-url="https://zh-cn.markdown.net.br/kuozhan-yufa/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;分享到Twitter
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://zh-cn.markdown.net.br/kuozhan-yufa/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;在脸书上分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://zh-cn.markdown.net.br/kuozhan-yufa/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;分享到Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Markdown®Advanced：语法，用法和示例[逐步说明]" data-url="https://zh-cn.markdown.net.br/kuozhan-yufa/" data-subject="你好！好的？我发现此Markdown指南非常容易遵循，请在可能的情况下看看。希望对您有所帮助，待会见。" data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;通过电子邮件分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Markdown®Advanced：语法，用法和示例[逐步说明]" data-url="https://zh-cn.markdown.net.br/kuozhan-yufa/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;分享到Whatsapp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Markdown®Advanced：语法，用法和示例[逐步说明]" data-url="https://zh-cn.markdown.net.br/kuozhan-yufa/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;通过电报分享
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">跟随@CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, 版权所有。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

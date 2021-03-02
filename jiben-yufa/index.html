@@ -1,0 +1,2683 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://zh-cn.markdown.net.br/jiben-yufa/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="如何格式化标题/标题，段落，列表等。适用于每个程序员的基本Markdown指南。 ✓简单✓简单＆✓快速。">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zh-cn.markdown.net.br/jiben-yufa/">
+    <meta property="og:title" content="Markdown®基础知识：语法，用法和示例[逐步说明]">
+    <meta property="og:description" content="如何格式化标题/标题，段落，列表等。适用于每个程序员的基本Markdown指南。 ✓简单✓简单＆✓快速。">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Markdown®基础知识：语法，用法和示例[逐步说明]</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="搜索"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/rumen/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>介绍</a>
+  </li>
+  <li class="bold white">
+    <a href="/jiben-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>基本语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuozhan-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>扩展语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuaisu-cankao/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>快速参考</a>
+  </li>
+  <li class="bold white">
+    <a href="/ruanjian/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>工具</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>基本Markdown语法</h1>
+              <h4 class="light">在本文中，您将学习构成Markdown语言基础的元素。</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">基本Markdown语法</span>
+<meta itemprop="position" content="2" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+    <div class="col s12">
+        <h2 id="overview">概述</h2>
+
+        <p>尽管有一些变化，但是大多数应用程序都支持Markdown的基本元素。这些元素对于您格式化文档至关重要。但是请不要误会，仅使用Markdown的基础知识，就可以为Web创建精心设计的站点。</p>
+
+        <blockquote><b>注意</b>：只要有可能，当从一个Markdown处理器到另一个Markdown处理器存在语法差异时，这些都会在本文中指出。</blockquote>
+
+        <h2 id="headings">职称</h2>
+
+        <p>每个文档都有或应该有标题，对吗？因此，让我们开始吧。</p>
+
+        <p>用于在Markdown中格式化标题的符号是单词标签<code class="lang-markdown">＃</code>。构建标题时，请在行的开头放置一个哈希，以分隔标题，从而格式化代码。</p>
+
+        <p>例如：</p>
+
+        <div class="code-example">
+	<pre class="lang-markdown"><code># 1级头衔</code></pre>
+	<a href="/bianji/?markdown=%23%201%E7%BA%A7%E5%A4%B4%E8%A1%94" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+        <p>它将转换为HTML tag <code class="lang-html">h1</code>。</p>
+
+        <pre class="lang-html"><code>&lt;h1&gt;1级头衔&lt;/h1&gt;</code>.</pre>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown中的标题H1转换为HTML"
+		        	title="Markdown教程-Markdown中的标题H1转换为HTML"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-h1_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown中的标题H1转换为HTML</span>
+		</figcaption>
+		</figure>
+        </div>
+
+        <blockquote><b>注</b>：tag <code class="lang-html">h1</code>代表HTML最重要的标题，通常是文章标题。</blockquote>
+
+        <p>您在行首使用的哈希数表示标题的级别，因此，格式<code class="lang-markdown">###我的标题</code>将创建3级标题。</p>
+
+        <p class="mv-40">
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-3427355473051563"
+                 data-ad-slot="3854885260"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </p>
+
+        <blockquote><b>注意</b>：当我们谈论关卡时，我们谈论的是转换为HTML的标题。在HTML中，标题级别从1到6，由tags <code class="lang-html">h1</code>，<code class="lang-html">h2</code>，<code class="lang-html">h3</code>，<code class="lang-html">h4</code>，<code class="lang-html">h5</code>和<code class="lang-html">h6</code></blockquote>
+
+        <p class="mt-60"><b>例子</b></p>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code># 1级头衔</code></pre>
+	<a href="/bianji/?markdown=%23%201%E7%BA%A7%E5%A4%B4%E8%A1%94" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h1&gt;1级头衔&lt;/h1&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+            <div class="code-sample">
+                <span class="h1-like">1级头衔</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>## 2级头衔</code></pre>
+	<a href="/bianji/?markdown=%23%23%202%E7%BA%A7%E5%A4%B4%E8%A1%94" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h2&gt;2级头衔&lt;/h2&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+            <div class="code-sample">
+                <span class="h2-like">2级头衔</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>### 3级头衔</code></pre>
+	<a href="/bianji/?markdown=%23%23%23%203%E7%BA%A7%E5%A4%B4%E8%A1%94" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h3&gt;3级头衔&lt;/h3&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+            <div class="code-sample">
+                <span class="h3-like">3级头衔</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>#### 4级头衔</code></pre>
+	<a href="/bianji/?markdown=%23%23%23%23%204%E7%BA%A7%E5%A4%B4%E8%A1%94" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h4&gt;4级头衔&lt;/h4&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+            <div class="code-sample">
+                <span class="h4-like">4级头衔</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>##### 5级头衔</code></pre>
+	<a href="/bianji/?markdown=%23%23%23%23%23%205%E7%BA%A7%E5%A4%B4%E8%A1%94" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h5&gt;5级头衔&lt;/h5&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+            <div class="code-sample">
+                <span class="h5-like">5级头衔</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>###### 6级头衔</code></pre>
+	<a href="/bianji/?markdown=%23%23%23%23%23%23%206%E7%BA%A7%E5%A4%B4%E8%A1%94" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h6&gt;6级头衔&lt;/h6&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+            <div class="code-sample">
+                <span class="h6-like">6级头衔</span>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-StackEdit上的Markdown标题"
+		        	title="Markdown教程-StackEdit上的Markdown标题"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-headings_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>StackEdit上的Markdown标题</span>
+		</figcaption>
+		</figure>
+        </div>
+
+        <h3 id="headings-alternative-syntax">替代语法</h3>
+
+        <p>Markdown为构建第1级和第2级标题提供了不同的语法，而不是在行的开头使用哈希，而是在第1级标题下方添加等号<code class="lang-text">==</code>，为级别添加减号<code class="lang-text">-</code> 2个标题。</p>
+
+        <div class="image-container">
+            <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-用于创建级别1和级别标题的替代语法"
+		        	title="Markdown教程-用于创建级别1和级别标题的替代语法"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>用于创建级别1和级别标题的替代语法</span>
+		</figcaption>
+		</figure>
+        </div>
+
+        <p class="mt-60"><b>例子</b></p>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>1级头衔
+===============</code></pre>
+	<a href="/bianji/?markdown=1%E7%BA%A7%E5%A4%B4%E8%A1%94%0D%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h1&gt;1级头衔&lt;/h1&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+            <div class="code-sample">
+                <span class="h1-like">1级头衔</span>
+            </div>
+        </div>
+
+        <div class="code-comparison">
+            <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+            <div class="code-example">
+	<pre class="lang-markdown"><code>2级头衔
+---------------</code></pre>
+	<a href="/bianji/?markdown=2%E7%BA%A7%E5%A4%B4%E8%A1%94%0D%0A%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+            <pre class="lang-html"><code>&lt;h2&gt;1级头衔&lt;/h2&gt;</code></pre>
+            <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+            <div class="code-sample">
+                <span class="h2-like">2级头衔</span>
+            </div>
+        </div>
+
+        <p>某些Markdown编辑器仅允许在文本下方使用等号<code class="lang-plaintext">=</code>或破折号<code class="lang-plaintext">-</code>，但这可能会导致与该语法不兼容的其他编辑器出现格式问题。</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-仅使用一个符号的标题的替代语法"
+		        	title="Markdown教程-仅使用一个符号的标题的替代语法"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-alternative-syntax-2_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>仅使用一个符号的标题的替代语法</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <h3 id="headings-best-practices">标题：最佳做法</h3>
+
+            <p>当我们讨论行首的井号<code class="lang-text">＃</code>与标题文本之间的空格时，可能会遇到兼容性问题。</p>
+
+            <p>始终建议在它们之间至少添加一个空格，除了可以更好地阅读文档之外，您还可以在Markdown应用程序中获得更多的编辑支持。</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p><a href="#table-1-3">表1.3</a>举例说明标题的正确构造。</p>
+
+            <table class="responsive-table" id="table-1-3">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;正确的</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;不建议</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td># 我的文章标题</td>
+                        <td>#我的文章标题</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">表1.3-正确使用Markdown中的标题/标题。</small>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w501.webp 501w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w426.webp 426w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w351.webp 351w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w276.webp 276w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w201.webp 201w"
+		         sizes="(max-width: 501px) 100vw, 501px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-以正确的方式构建Markdown标题"
+		        	title="Markdown教程-以正确的方式构建Markdown标题"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w501.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w501.png 501w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w426.png 426w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w351.png 351w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w276.png 276w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w201.png 201w"
+		         	sizes="(max-width: 501px) 100vw, 501px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-headings-correct-syntax_w501.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>以正确的方式构建Markdown标题</span>
+		</figcaption>
+		</figure>
+            </div>
+
+
+            <h2 id="paragraphs">段落</h2>
+
+            <p>Markdown的最简单格式是该段落的格式。要创建一个，只需用一段空行分隔一段文本，创建片段，Markdown处理器会将其解释为段落。</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w579.webp 579w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w484.webp 484w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w389.webp 389w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w294.webp 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w199.webp 199w"
+		         sizes="(max-width: 579px) 100vw, 579px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-段落"
+		        	title="Markdown教程-段落"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w579.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w579.png 579w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w484.png 484w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w389.png 389w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w294.png 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w199.png 199w"
+		         	sizes="(max-width: 579px) 100vw, 579px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph_w579.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown中的段落</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p class="mt-60"><b>例子</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>Markdown对每个程序员都很重要。
+
+学习Markdown对于成功的职业至关重要。</code></pre>
+	<a href="/bianji/?markdown=Markdown%E5%AF%B9%E6%AF%8F%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E9%83%BD%E5%BE%88%E9%87%8D%E8%A6%81%E3%80%82%0D%0A%0D%0A%E5%AD%A6%E4%B9%A0Markdown%E5%AF%B9%E4%BA%8E%E6%88%90%E5%8A%9F%E7%9A%84%E8%81%8C%E4%B8%9A%E8%87%B3%E5%85%B3%E9%87%8D%E8%A6%81%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+
+                <pre class="lang-html"><code>&lt;p&gt;Markdown对每个程序员都很重要。&lt;/p&gt;
+
+&lt;p&gt;学习Markdown对于成功的职业至关重要。&lt;p&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <p>Markdown对每个程序员都很重要。</p>
+                    <p>学习Markdown对于成功的职业至关重要。</p>
+                </div>
+            </div>
+
+
+
+            <h3 id="paragraphs-best-practices">段落：最佳做法</h3>
+
+            <p>通常，该段落会停留在行的开头，也就是说，避免使用任何空格（包括空格和制表符）将其缩进。</p>
+
+            <blockquote><b>注意</b>：该段落在列表中时必须缩进。</blockquote>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p><a href="#table-1-5">表1.5</a>举例说明了构造段落的正确用法。</p>
+
+            <table class="responsive-table" id="table-1-5">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;正确的</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;不建议</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            请勿在段落前面使用空格或制表符。<br><br>
+                            该段必须左对齐。<br><br>
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;这些空间可能导致格式化问题，具体取决于Markdown应用程序。<br><br>
+                            &nbsp;&nbsp;都不建议使用任何表格。
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">表1.5-在Markdown中创建段落时该做什么和不该做什么。</small>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-错误的段落语法"
+		        	title="Markdown教程-错误的段落语法"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-paragraph-wrong-syntax_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			
+		</figure>
+            </div>
+
+            <h2 id="line-break">换行</h2>
+
+            <p>在HTML中，换行符由tag <code class="lang-html">br</code>表示。</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/html-line-break_w1037.webp 1037w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w917.webp 917w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w797.webp 797w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w677.webp 677w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w557.webp 557w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w437.webp 437w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w317.webp 317w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w197.webp 197w"
+		         sizes="(max-width: 677px) 100vw, 677px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-HTML中的换行符"
+		        	title="Markdown教程-HTML中的换行符"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/html-line-break_w1037.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/html-line-break_w1037.png 1037w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w917.png 917w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w797.png 797w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w677.png 677w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w557.png 557w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w437.png 437w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w317.png 317w,
+https://markdown.net.br/assets/img/basic-syntax/html-line-break_w197.png 197w"
+		         	sizes="(max-width: 677px) 100vw, 677px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/html-line-break_w1037.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>HTML中的换行符</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p>要在Markdown中产生换行符，请在该行的末尾插入两个或多个空格，然后按<code class="lang-plaintext">Enter</code>键。</p>
+
+            <p class="mt-60"><b>例子</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>文档的第一行。
+文档的第二行。</code></pre>
+	<a href="/bianji/?markdown=%E6%96%87%E6%A1%A3%E7%9A%84%E7%AC%AC%E4%B8%80%E8%A1%8C%E3%80%82%0D%0A%E6%96%87%E6%A1%A3%E7%9A%84%E7%AC%AC%E4%BA%8C%E8%A1%8C%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;p&gt;文档的第一行。&lt;br&gt;<br>
+文档的第二行。&lt;/p&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <p>文档的第一行。<br>
+                        文档的第二行。
+                    </p>
+                </div>
+            </div>
+
+            <h3 id="line-break-best-practices">换行：最佳做法</h3>
+
+            <p>尽管可以与大多数应用程序兼容，但使用空格创建换行符可能会导致格式问题。</p>
+
+            <p>以下是一些要点：</p>
+
+            <ul class="collection">
+                <li class="collection-item green lighten-5">行后的空白很难注意到。</li>
+                <li class="collection-item yellow lighten-5">由于习惯或粗心大意，人们可以在行尾添加空格。</li>
+                <li class="collection-item">
+                    <ins class="adsbygoogle"
+                         style="display:block; text-align:center;"
+                         data-ad-layout="in-article"
+                         data-ad-format="fluid"
+                         data-ad-client="ca-pub-3427355473051563"
+                         data-ad-slot="3854885260"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </li>
+                <li class="collection-item green lighten-5">某些文本编辑器（例如Sublime Text）具有在保存文档时从行中删除行前和行后空格的设置。</li>
+            </ul>
+
+            <p>Uma alternativa viável para evitar qualquer problema com quebra de linhas, basta usar a tag HTML <code class="lang-html">&lt;br&gt;</code> diretamente nos seus documentos.</p>
+
+            <blockquote><b>注意</b>：有趣的是，大多数Markdown应用程序也与HTML中的tags兼容，也就是说，您可以在同一文档中将Markdown格式与HTML格式合并。</blockquote>
+
+            <blockquote><b>注意</b>：在某些应用程序中，只需按<code class="lang-plaintext">Enter</code>键即可创建换行符</blockquote>
+
+            <blockquote><b>注</b>：Markdown的变体，例如CommonMark，将反斜杠<code class="lang-text">\</code>的使用解释为换行符。</blockquote>
+
+            <p>不建议按<code class="lang-plaintext">Enter</code>键或使用反斜杠<code class="lang-plaintext">\</code>（尽管有效），因为兼容性取决于Markdown程序。</p>
+
+            <p><a href="#table-1-7">表1.7</a>显示了创建新行的正确语法。</p>
+
+            <table class="responsive-table" id="table-1-7">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;正确的</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;不建议</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            行后两个空格。<code class="lang-text"> </code><code class="lang-text"> </code><br>
+                            插入了新行。<br><br>
+                            使用tag HTML打破界限。<code class="lang-html">&lt;br&gt;</code><br>
+                            插入了新行。<br><br>
+                        </td>
+                        <td>
+                            使用反斜杠来换行。\<br>
+                            插入了新行。<br><br>
+                            只需按Enter即可换行。<code class="lang-text">Enter</code><br>
+                            插入了新行。<br><br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">表1.7-在Markdown中生成换行符的正确方法。</small>
+
+
+            <h2 id="emphasis">重点</h2>
+
+            <p>类似于Microsoft Word等WYSIWYG编辑器，Markdown还提供了格式设置来强调文本。</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w564.webp 564w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w473.webp 473w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w382.webp 382w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w291.webp 291w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w200.webp 200w"
+		         sizes="(max-width: 564px) 100vw, 564px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Microsoft Word强调格式"
+		        	title="Markdown教程-Microsoft Word强调格式"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w564.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w564.png 564w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w473.png 473w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w382.png 382w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w291.png 291w,
+https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w200.png 200w"
+		         	sizes="(max-width: 564px) 100vw, 564px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/microsoft-word-emphasis-formatting_w564.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Microsoft Word中的强调格式</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p>最受欢迎的强调格式包括粗体和斜体，也可以使用Markdown语法来应用。</p>
+
+            <h3 id="bold">在Markdown中加粗</h3>
+
+            <p>要在Markdown中设置粗体文本格式，请在内容之前放置两个星号<code class="lang-plaintext">**</code>，在内容之后放置两个星号<code class="lang-plaintext">**</code>。</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w853.webp 853w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w760.webp 760w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w667.webp 667w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w574.webp 574w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w481.webp 481w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w388.webp 388w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w295.webp 295w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w202.webp 202w"
+		         sizes="(max-width: 760px) 100vw, 760px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown中的粗体"
+		        	title="Markdown教程-Markdown中的粗体"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w853.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w853.png 853w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w760.png 760w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w667.png 667w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w574.png 574w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w481.png 481w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w388.png 388w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w295.png 295w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w202.png 202w"
+		         	sizes="(max-width: 760px) 100vw, 760px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-bold_w853.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>在Markdown中加粗</span>
+		</figcaption>
+		</figure>
+            </div>
+
+
+            <p class="mt-60"><b>例子</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>**This part of the text** will be bold.</code></pre>
+	<a href="/bianji/?markdown=%2A%2AThis%20part%20of%20the%20text%2A%2A%20will%20be%20bold%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;strong&gt;This part of the text&lt;/strong&gt; will be bold.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <strong>This part of the text</strong> will be bold.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>__This part of the text__ will be bold.</code></pre>
+	<a href="/bianji/?markdown=__This%20part%20of%20the%20text__%20will%20be%20bold%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;strong&gt;This part of the text&lt;/strong&gt; will be bold.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <strong>This part of the text</strong> will be bold.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>Markdown**Is**Easy**To**Learn</code></pre>
+	<a href="/bianji/?markdown=Markdown%2A%2AIs%2A%2AEasy%2A%2ATo%2A%2ALearn" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>Markdown&lt;strong&gt;Is&lt;/strong&gt;Easy&lt;strong&gt;To&lt;/strong&gt;Learn</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    Markdown<strong>Is</strong>Easy<strong>To</strong>Learn
+                </div>
+            </div>
+
+            <blockquote><b>NOTE</b>：如以上示例所示，您可以在内容还格式化Markdown之前和之后使用两个下划线<code class="lang-plaintext">__</code>来用下划线替换星号。</blockquote>
+
+            <h3 id="bold-best-practices">粗体：最佳做法</h3>
+
+            <p>使用两个星号和两个下划线都可以对内容应用粗体格式。</p>
+
+            <p>但是，在单词中间使用下划线可能会导致格式问题，具体取决于Markdown处理器，因此，建议使用星号。</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p><a href="#table-1-9">表1.9</a>演示了建议的粗体格式用法。</p>
+
+            <table class="responsive-table" id="table-1-9">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;正确的</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;不建议</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            markdown**is**simple
+                        </td>
+                        <td>
+                            markdown__is__simple
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">表1.9-在Markdown中以粗体显示格式的建议语法。</small>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w852.webp 852w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w759.webp 759w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w666.webp 666w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w573.webp 573w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w480.webp 480w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w387.webp 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w294.webp 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w201.webp 201w"
+		         sizes="(max-width: 759px) 100vw, 759px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-内容粗体"
+		        	title="Markdown教程-内容粗体"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w852.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w852.png 852w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w759.png 759w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w666.png 666w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w573.png 573w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w480.png 480w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w387.png 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w294.png 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w201.png 201w"
+		         	sizes="(max-width: 759px) 100vw, 759px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-best-practices_w852.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>内容粗体</span>
+		</figcaption>
+		</figure>
+            </div>
+
+
+            <h3 id="italics">Markdown中的斜体</h3>
+
+            <p>与粗体一样，Markdown中的斜体格式也使用星号<code class="lang-plaintext">*</code>或下划线<code class="lang-plaintext">_</code>，但对于斜体，在内容和a之前仅使用星号<code class="lang-plaintext">*</code>。内容后的星号<code class="lang-plaintext">*</code>。</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w847.webp 847w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w755.webp 755w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w663.webp 663w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w571.webp 571w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w479.webp 479w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w387.webp 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w295.webp 295w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w203.webp 203w"
+		         sizes="(max-width: 755px) 100vw, 755px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown中的斜体"
+		        	title="Markdown教程-Markdown中的斜体"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w847.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w847.png 847w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w755.png 755w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w663.png 663w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w571.png 571w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w479.png 479w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w387.png 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w295.png 295w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w203.png 203w"
+		         	sizes="(max-width: 755px) 100vw, 755px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-italics_w847.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown中的斜体格式语法</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p class="mt-60"><b>例子</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>*This part of the text* will be in italics.</code></pre>
+	<a href="/bianji/?markdown=%2AThis%20part%20of%20the%20text%2A%20will%20be%20in%20italics%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;em&gt;This part of the text&lt;/em&gt; will be in italics.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <em>This part of the text</em> will be in italics.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>_This part of the text_ will be in italics.</code></pre>
+	<a href="/bianji/?markdown=_This%20part%20of%20the%20text_%20will%20be%20in%20italics%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;em&gt;This part of the text&lt;/em&gt; will be in italics.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <em>This part of the text</em> will be in italics.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>Markdown*Is*Easy*To*Learn</code></pre>
+	<a href="/bianji/?markdown=Markdown%2AIs%2AEasy%2ATo%2ALearn" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>Markdown&lt;em&gt;Is&lt;/em&gt;Easy&lt;em&gt;To&lt;/em&gt;Learn</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    Markdown<em>Is</em>Easy<em>To</em>Learn
+                </div>
+            </div>
+
+            <p>要斜体化Markdown单词的中间部分，请在内容前后使用星号。</p>
+
+            <p>例子：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>Mar*kdo*wn</code></pre>
+	<a href="/bianji/?markdown=Mar%2Akdo%2Awn" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <h3 id="italics-best-practices">斜体：最佳做法</h3>
+
+            <p>在单词中间使用斜体时，请始终使用星号<code class="lang-plaintext">*</code>，这样可以避免Markdown处理器的兼容性问题。</p>
+
+            <p><a href="#table-1-11">表1.11</a>显示了推荐的标记，以强调斜体内容。</p>
+
+            <table class="responsive-table" id="table-1-11">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;正确的</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;不建议</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            markdown*is*simple
+                        </td>
+                        <td>
+                            markdown_is_simple
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">表1.11-建议的格式，以强调使用斜体字的单词。</small>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w852.webp 852w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w759.webp 759w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w666.webp 666w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w573.webp 573w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w480.webp 480w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w387.webp 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w294.webp 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w201.webp 201w"
+		         sizes="(max-width: 759px) 100vw, 759px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown斜体字-最佳做法"
+		        	title="Markdown教程-Markdown斜体字-最佳做法"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w852.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w852.png 852w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w759.png 759w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w666.png 666w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w573.png 573w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w480.png 480w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w387.png 387w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w294.png 294w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w201.png 201w"
+		         	sizes="(max-width: 759px) 100vw, 759px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-italics-best-practices_w852.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown中的斜体-设置单词中间的格式。</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <h3 id="bold-italics">粗体和斜体</h3>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w850.webp 850w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w757.webp 757w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w571.webp 571w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w478.webp 478w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w385.webp 385w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w292.webp 292w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w199.webp 199w"
+		         sizes="(max-width: 757px) 100vw, 757px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown中的粗体和斜体"
+		        	title="Markdown教程-Markdown中的粗体和斜体"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w850.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w850.png 850w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w757.png 757w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w571.png 571w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w478.png 478w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w385.png 385w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w292.png 292w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w199.png 199w"
+		         	sizes="(max-width: 757px) 100vw, 757px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics_w850.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown中的粗体和斜体</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p>只是粗体还是斜体？如果需要，可以将两种格式结合使用以突出显示任何内容。</p>
+
+            <p>要同时应用粗体和斜体，请在要突出显示的文本周围添加三个星号<code class="lang-text">***</code>或三个下划线<code class="lang-text">___</code>。</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p>如果您要强调两种格式的单词中间，请优先使用星号，在这种情况下，请使用三个星号<code class="lang-text">***</code>。</p>
+
+            <p class="mt-60"><b>例子</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>***This part of the text*** will be bold and italicized.</code></pre>
+	<a href="/bianji/?markdown=%2A%2A%2AThis%20part%20of%20the%20text%2A%2A%2A%20will%20be%20bold%20and%20italicized%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;strong&gt;&lt;em&gt;This part of the text&lt;/em&gt;&lt;/strong&gt; will be bold and italicized.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <strong><em>This part of the text</em></strong> will be bold and italicized.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>This is really ___important___.</code></pre>
+	<a href="/bianji/?markdown=This%20is%20really%20___important___%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>This is really &lt;strong&gt;&lt;em&gt;important&lt;/em&gt;&lt;/strong&gt;.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    This is really <strong><em>important</em></strong>.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>This is really __*important*__.</code></pre>
+	<a href="/bianji/?markdown=This%20is%20really%20__%2Aimportant%2A__%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>This is really &lt;strong&gt;&lt;em&gt;important&lt;/em&gt;&lt;/strong&gt;.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    This is really <strong><em>important</em></strong>.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>This is really **_important_**.</code></pre>
+	<a href="/bianji/?markdown=This%20is%20really%20%2A%2A_important_%2A%2A%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>This is really &lt;strong&gt;&lt;em&gt;important&lt;/em&gt;&lt;/strong&gt;.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    This is really <strong><em>important</em></strong>.
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>This text is ***really*** important.</code></pre>
+	<a href="/bianji/?markdown=This%20text%20is%20%2A%2A%2Areally%2A%2A%2A%20important%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>This text is &lt;strong&gt;&lt;em&gt;really&lt;/em&gt;&lt;/strong&gt; important.</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    This text is <strong><em>really</em></strong> important.
+                </div>
+            </div>
+
+            <h3 id="bold-italics-best-practices">粗体和斜体：最佳做法</h3>
+
+            <p>为避免Markdown应用程序的兼容性问题，当突出显示单词的中部时，将粗体和斜体结合使用时，应优先使用三个星号。</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w977.webp 977w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w866.webp 866w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w755.webp 755w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w644.webp 644w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w533.webp 533w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w422.webp 422w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w311.webp 311w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w200.webp 200w"
+		         sizes="(max-width: 755px) 100vw, 755px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Markdown中的粗体和斜体-最佳做法"
+		        	title="Markdown教程-Markdown中的粗体和斜体-最佳做法"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w977.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w977.png 977w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w866.png 866w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w755.png 755w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w644.png 644w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w533.png 533w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w422.png 422w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w311.png 311w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w200.png 200w"
+		         	sizes="(max-width: 755px) 100vw, 755px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-bold-italics-best-practices_w977.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>对Markdown应用粗体和斜体的推荐语法。</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p><a href="#table-1-13">表1.13</a>演示了将两种格式组合使用的指定用途。</p>
+
+            <table class="responsive-table" id="table-1-13">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;正确的</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;不建议</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Text***Really***Important.
+                        </td>
+                        <td>
+                            Text___Really___Important.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">表1.13-Markdown格式建议结合使用粗体和斜体。</small>
+
+
+            <h2 id="blockquote">Blockquote</h2>
+
+            <p>Para marcar um conteúdo como blockquote no Markdown, use o sinal de maior que <code class="lang-text">&gt;</code> no começo do parágrafo.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-Blockquote"
+		        	title="Markdown教程-Blockquote"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Markdown中的Blockquote。</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <p>例如，此Markdown标签：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&gt; 块引用内容。</code></pre>
+	<a href="/bianji/?markdown=>%20%E5%9D%97%E5%BC%95%E7%94%A8%E5%86%85%E5%AE%B9%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>此输出将导致HTML：</p>
+
+            <blockquote>
+                <p>块引用内容。</p>
+            </blockquote>
+
+            <h3 id="blockquote-muiltiple-paragraphs">带有多个段落的Blockquote</h3>
+
+            <p>Se você precisa de um blockquote contendo diversos parágrafos dentro dele, utilize o sinal de maior que <code class="lang-plaintext">&gt;</code> a frente de cada um desses parágrafos e os separe por uma linha contendo apenas o sinal de maior que.</p>
+
+            <div class="image-container">
+                <figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1280.webp 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1126.webp 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w972.webp 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w818.webp 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w664.webp 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w510.webp 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w356.webp 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown教程-具有多个段落的Blockquote"
+		        	title="Markdown教程-具有多个段落的Blockquote"
+		         	src="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1280.png 1280w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1126.png 1126w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w972.png 972w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w818.png 818w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w664.png 664w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w510.png 510w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w356.png 356w,
+https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/basic-syntax/markdown-blockquote-paragraphs_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>带有多个段落的Blockquote</span>
+		</figcaption>
+		</figure>
+            </div>
+
+            <blockquote><b>注意</b>：必须在分隔段落的行上放置大于号<code class="lang-text">></code>，以便Markdown处理器可以正确解释您的标记。</blockquote>
+
+            <p>让我们看一个例子：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&gt; 块引用的第一段。
+&gt;
+&gt; 引用的第二段。</code></pre>
+	<a href="/bianji/?markdown=>%20%E5%9D%97%E5%BC%95%E7%94%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AE%B5%E3%80%82%0D%0A>%0D%0A>%20%E5%BC%95%E7%94%A8%E7%9A%84%E7%AC%AC%E4%BA%8C%E6%AE%B5%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>HTML中的输出：</p>
+
+            <blockquote>
+                <p>块引用的第一段。</p>
+                <p>引用的第二段。</p>
+            </blockquote>
+
+            <h3 id="blockquote-nested">嵌套的Blockquotes</h3>
+
+            <p>除了在blockquote中插入几个段落外，您还可以嵌套它们，即在blockquotes内插入blockquotes，复杂吗？让我们简化一下。</p>
+
+            <p>要创建嵌套块，请在段落前使用两个大于号<code class="lang-text">>></code>。</p>
+
+            <p>例子：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&gt; 块引用内容。
+&gt;
+&gt;&gt; 本段将被解释为嵌套的blockquote。</code></pre>
+	<a href="/bianji/?markdown=>%20%E5%9D%97%E5%BC%95%E7%94%A8%E5%86%85%E5%AE%B9%E3%80%82%0D%0A>%0D%0A>>%20%E6%9C%AC%E6%AE%B5%E5%B0%86%E8%A2%AB%E8%A7%A3%E9%87%8A%E4%B8%BA%E5%B5%8C%E5%A5%97%E7%9A%84blockquote%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>在HTML中渲染：</p>
+
+            <blockquote>
+                <p>块引用内容。</p>
+                <blockquote>
+                    <p>本段将被解释为嵌套的blockquote。</p>
+                </blockquote>
+            </blockquote>
+
+            <h3 id="blockquote-other-elements">Blockquote与其他元素</h3>
+
+            <p>blockquotes的多功能性允许在其中插入其他Markdown元素。</p>
+
+            <blockquote><b>注意</b>：某些Markdown元素放置在blockquote中时可能无法正确呈现，这在Markdown处理器之间有很大差异。</blockquote>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&gt; #### 标题内的h4
+&gt;
+&gt; - 块引用内列表的第一个元素。
+&gt; - 块引用内列表的第二个元素。
+&gt;
+&gt;  *斜体文字* 段落的一部分，不格式化 **粗体文字**.</code></pre>
+	<a href="/bianji/?markdown=>%20%23%23%23%23%20%E6%A0%87%E9%A2%98%E5%86%85%E7%9A%84h4%0D%0A>%0D%0A>%20%2D%20%E5%9D%97%E5%BC%95%E7%94%A8%E5%86%85%E5%88%97%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E3%80%82%0D%0A>%20%2D%20%E5%9D%97%E5%BC%95%E7%94%A8%E5%86%85%E5%88%97%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%85%83%E7%B4%A0%E3%80%82%0D%0A>%0D%0A>%20%20%2A%E6%96%9C%E4%BD%93%E6%96%87%E5%AD%97%2A%20%E6%AE%B5%E8%90%BD%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%8C%E4%B8%8D%E6%A0%BC%E5%BC%8F%E5%8C%96%20%2A%2A%E7%B2%97%E4%BD%93%E6%96%87%E5%AD%97%2A%2A%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+            <p>HTML中的输出：</p>
+
+            <blockquote>
+                <h4>标题内的h4</h4>
+                <ul>
+                    <li>块引用内列表的第一个元素。</li>
+                    <li>块引用内列表的第二个元素。</li>
+                </ul>
+                <p>该段落的斜体文本部分，不格式化<strong>粗体</strong>。</p>
+            </blockquote>
+
+
+            <h2 id="lists">清单</h2>
+
+            <p>列表对于组织文档中的主题至关重要。列表有助于可视化可能彼此相关的元素。</p>
+
+            <p>要在Markdown中创建列表，我们将数字用于有序列表，即，按顺序和破折号<code class="lang-text">-</code>，或加号<code class="lang-text">+</code>，或星号<code class="lang-text">*</code>表示无序列表。</p>
+
+            <h3 id="lists-ordered">有序列表</h3>
+
+            <p>让我们从对列表元素进行排序开始，为此，我们在数字后面加上句号和元素文本。</p>
+
+            <p>值得注意的是，元素编号不必按升序排列，但是，列表中的第一个元素必须以数字<code class="lang-text">1</code>开头。</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <blockquote><b>注</b>：要创建缩进元素，请在标记该元素的数字之前插入一个制表符。在某些Markdown处理器中，您还可以在编号之前插入3个空格，结果是相似的，但是根据应用程序的不同，在使用TAB时可能会有所不同。</blockquote>
+
+            <p class="mt-60"><b>例子</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>1. 第一要素
+2. 第二要素
+3. 第三要素
+4. 第四要素</code></pre>
+	<a href="/bianji/?markdown=1%2E%20%E7%AC%AC%E4%B8%80%E8%A6%81%E7%B4%A0%0D%0A2%2E%20%E7%AC%AC%E4%BA%8C%E8%A6%81%E7%B4%A0%0D%0A3%2E%20%E7%AC%AC%E4%B8%89%E8%A6%81%E7%B4%A0%0D%0A4%2E%20%E7%AC%AC%E5%9B%9B%E8%A6%81%E7%B4%A0" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ol&gt;
+    &lt;li&gt;第一要素&lt;/li&gt;
+    &lt;li&gt;第二要素&lt;/li&gt;
+    &lt;li&gt;第三要素&lt;/li&gt;
+    &lt;li&gt;第四要素&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <ol>
+                        <li>第一要素</li>
+                        <li>第二要素</li>
+                        <li>第三要素</li>
+                        <li>第四要素</li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>1. 第一要素
+1. 第二要素
+1. 第三要素
+1. 第四要素</code></pre>
+	<a href="/bianji/?markdown=1%2E%20%E7%AC%AC%E4%B8%80%E8%A6%81%E7%B4%A0%0D%0A1%2E%20%E7%AC%AC%E4%BA%8C%E8%A6%81%E7%B4%A0%0D%0A1%2E%20%E7%AC%AC%E4%B8%89%E8%A6%81%E7%B4%A0%0D%0A1%2E%20%E7%AC%AC%E5%9B%9B%E8%A6%81%E7%B4%A0" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ol&gt;
+    &lt;li&gt;第一要素&lt;/li&gt;
+    &lt;li&gt;第二要素&lt;/li&gt;
+    &lt;li&gt;第三要素&lt;/li&gt;
+    &lt;li&gt;第四要素&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <ol>
+                        <li>第一要素</li>
+                        <li>第二要素</li>
+                        <li>第三要素</li>
+                        <li>第四要素</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>1. 第一要素
+8. 第二要素
+3. 第三要素
+5. 第四要素</code></pre>
+	<a href="/bianji/?markdown=1%2E%20%E7%AC%AC%E4%B8%80%E8%A6%81%E7%B4%A0%0D%0A8%2E%20%E7%AC%AC%E4%BA%8C%E8%A6%81%E7%B4%A0%0D%0A3%2E%20%E7%AC%AC%E4%B8%89%E8%A6%81%E7%B4%A0%0D%0A5%2E%20%E7%AC%AC%E5%9B%9B%E8%A6%81%E7%B4%A0" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ol&gt;
+    &lt;li&gt;第一要素&lt;/li&gt;
+    &lt;li&gt;第二要素&lt;/li&gt;
+    &lt;li&gt;第三要素&lt;/li&gt;
+    &lt;li&gt;第四要素&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <ol>
+                        <li>第一要素</li>
+                        <li>第二要素</li>
+                        <li>第三要素</li>
+                        <li>第四要素</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>1. 第一要素
+2. 第二要素
+3. 第三要素
+    1. 缩进元素
+    2. 缩进元素
+4. 第四要素</code></pre>
+	<a href="/bianji/?markdown=1%2E%20%E7%AC%AC%E4%B8%80%E8%A6%81%E7%B4%A0%0D%0A2%2E%20%E7%AC%AC%E4%BA%8C%E8%A6%81%E7%B4%A0%0D%0A3%2E%20%E7%AC%AC%E4%B8%89%E8%A6%81%E7%B4%A0%0D%0A%20%20%20%201%2E%20%E7%BC%A9%E8%BF%9B%E5%85%83%E7%B4%A0%0D%0A%20%20%20%202%2E%20%E7%BC%A9%E8%BF%9B%E5%85%83%E7%B4%A0%0D%0A4%2E%20%E7%AC%AC%E5%9B%9B%E8%A6%81%E7%B4%A0" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ol&gt;
+    &lt;li&gt;第一要素&lt;/li&gt;
+    &lt;li&gt;第二要素&lt;/li&gt;
+    &lt;li&gt;第三要素&lt;/li&gt;
+    &lt;ol&gt;
+        &lt;li&gt;缩进元素&lt;/li&gt;
+        &lt;li&gt;缩进元素&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;第四要素&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <ol>
+                        <li>第一要素</li>
+                        <li>第二要素</li>
+                        <li>
+                            第三要素
+                            <ol>
+                                <li>缩进元素</li>
+                                <li>缩进元素</li>
+                            </ol>
+                        </li>
+                        <li>第四要素</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3 id="lists-unordered">无序列表</h3>
+
+            <p>无序列表是通常由元素左侧的一些符号表示的元素序列，即此处没有数字序列。</p>
+
+            <p>用于创建无序列表的Markdown标记是加号<code class="lang-text">+</code>，或破折号<code class="lang-text">-</code>，或星号<code class="lang-text">*</code>。</p>
+
+            <p class="mv-40">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3427355473051563"
+                     data-ad-slot="3854885260"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </p>
+
+            <p>将这两个符号之一放在列表项之前，以对其进行标界，然后是空格和元素的内容。</p>
+
+            <blockquote><b>注意</b>：通过在标记元素之前插入选项卡来缩进列表中的元素。</blockquote>
+
+            <p class="mt-60"><b>例子</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>- 第一要素
+- 第二要素
+- 第三要素
+- 第四要素</code></pre>
+	<a href="/bianji/?markdown=%2D%20%E7%AC%AC%E4%B8%80%E8%A6%81%E7%B4%A0%0D%0A%2D%20%E7%AC%AC%E4%BA%8C%E8%A6%81%E7%B4%A0%0D%0A%2D%20%E7%AC%AC%E4%B8%89%E8%A6%81%E7%B4%A0%0D%0A%2D%20%E7%AC%AC%E5%9B%9B%E8%A6%81%E7%B4%A0" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ul&gt;
+    &lt;li&gt;第一要素&lt;/li&gt;
+    &lt;li&gt;第二要素&lt;/li&gt;
+    &lt;li&gt;第三要素&lt;/li&gt;
+    &lt;li&gt;第四要素&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <ul class="browser-default">
+                        <li>第一要素</li>
+                        <li>第二要素</li>
+                        <li>第三要素</li>
+                        <li>第四要素</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>* 第一要素
+* 第二要素
+* 第三要素
+* 第四要素</code></pre>
+	<a href="/bianji/?markdown=%2A%20%E7%AC%AC%E4%B8%80%E8%A6%81%E7%B4%A0%0D%0A%2A%20%E7%AC%AC%E4%BA%8C%E8%A6%81%E7%B4%A0%0D%0A%2A%20%E7%AC%AC%E4%B8%89%E8%A6%81%E7%B4%A0%0D%0A%2A%20%E7%AC%AC%E5%9B%9B%E8%A6%81%E7%B4%A0" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ul&gt;<br>
+    &lt;li&gt;第一要素&lt;/li&gt;<br>
+    &lt;li&gt;第二要素&lt;/li&gt;<br>
+    &lt;li&gt;第三要素&lt;/li&gt;<br>
+    &lt;li&gt;第四要素&lt;/li&gt;<br>
+&lt;/ul&gt;</code></pre>
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <ul class="browser-default">
+                        <li>第一要素</li>
+                        <li>第二要素</li>
+                        <li>第三要素</li>
+                        <li>第四要素</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>+ 第一要素
+* 第二要素
+- 第三要素
++ 第四要素</code></pre>
+	<a href="/bianji/?markdown=%2B%20%E7%AC%AC%E4%B8%80%E8%A6%81%E7%B4%A0%0D%0A%2A%20%E7%AC%AC%E4%BA%8C%E8%A6%81%E7%B4%A0%0D%0A%2D%20%E7%AC%AC%E4%B8%89%E8%A6%81%E7%B4%A0%0D%0A%2B%20%E7%AC%AC%E5%9B%9B%E8%A6%81%E7%B4%A0" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ul&gt;<br>
+    &lt;li&gt;第一要素&lt;/li&gt;<br>
+    &lt;li&gt;第二要素&lt;/li&gt;<br>
+    &lt;li&gt;第三要素&lt;/li&gt;<br>
+    &lt;li&gt;第四要素&lt;/li&gt;<br>
+&lt;/ul&gt;</code></pre>
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <ul class="browser-default">
+                        <li>第一要素</li>
+                        <li>第二要素</li>
+                        <li>第三要素</li>
+                        <li>第四要素</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>- 第一要素
+- 第二要素
+- 第三要素
+    - 缩进元素
+    - 缩进元素
+- 第四要素</code></pre>
+	<a href="/bianji/?markdown=%2D%20%E7%AC%AC%E4%B8%80%E8%A6%81%E7%B4%A0%0D%0A%2D%20%E7%AC%AC%E4%BA%8C%E8%A6%81%E7%B4%A0%0D%0A%2D%20%E7%AC%AC%E4%B8%89%E8%A6%81%E7%B4%A0%0D%0A%20%20%20%20%2D%20%E7%BC%A9%E8%BF%9B%E5%85%83%E7%B4%A0%0D%0A%20%20%20%20%2D%20%E7%BC%A9%E8%BF%9B%E5%85%83%E7%B4%A0%0D%0A%2D%20%E7%AC%AC%E5%9B%9B%E8%A6%81%E7%B4%A0" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;ul&gt;
+    &lt;li&gt;第一要素&lt;/li&gt;
+    &lt;li&gt;第二要素&lt;/li&gt;
+    &lt;li&gt;第三要素
+    &lt;ul&gt;
+        &lt;li&gt;缩进元素&lt;/li&gt;
+        &lt;li&gt;缩进元素&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;第四要素&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <ul class="browser-default">
+                        <li>第一要素</li>
+                        <li>第二要素</li>
+                        <li>
+                            第三要素
+                            <ul class="browser-default">
+                                <li>缩进元素</li>
+                                <li>缩进元素</li>
+                            </ul>
+                        </li>
+                        <li>第四要素</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <h3 id="lists-adding-elements">添加元素</h3>
+
+            <p>Markdown允许您在列表中间插入其他元素，而不会破坏其连续性。</p>
+
+            <p>要保留列表的格式，请将不同的元素缩进4个空格或一个制表符。</p>
+
+            <h3 id="lists-paragraph">段落</h3>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>* 这是列表中的第一个元素。
+* 这是列表中的第二个元素。
+    添加了一个段落而不破坏列表字符串。
+* 最后是列表中的第三项。</code></pre>
+	<a href="/bianji/?markdown=%2A%20%E8%BF%99%E6%98%AF%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E3%80%82%0D%0A%2A%20%E8%BF%99%E6%98%AF%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%85%83%E7%B4%A0%E3%80%82%0D%0A%20%20%20%20%E6%B7%BB%E5%8A%A0%E4%BA%86%E4%B8%80%E4%B8%AA%E6%AE%B5%E8%90%BD%E8%80%8C%E4%B8%8D%E7%A0%B4%E5%9D%8F%E5%88%97%E8%A1%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%82%0D%0A%2A%20%E6%9C%80%E5%90%8E%E6%98%AF%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%89%E9%A1%B9%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>结果将是这样的：</p>
+            <ul class="browser-default">
+                <li>这是列表中的第一个元素。</li>
+                <li>这是列表中的第二个元素。</li>
+                <li>
+                    <p>添加了一个段落而不破坏列表字符串。</p>
+                </li>
+                <li>最后是列表中的第三项。</li>
+            </ul>
+
+            <h3 id="lists-blockquote">列表中的Blockquote</h3>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>* 这是列表中的第一个元素。
+* 这是列表中的第二个元素。
+
+    &gt; 列表中间的Blockquote。
+
+* 最后是列表中的第三项。</code></pre>
+	<a href="/bianji/?markdown=%2A%20%E8%BF%99%E6%98%AF%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E3%80%82%0D%0A%2A%20%E8%BF%99%E6%98%AF%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%85%83%E7%B4%A0%E3%80%82%0D%0A%0D%0A%20%20%20%20>%20%E5%88%97%E8%A1%A8%E4%B8%AD%E9%97%B4%E7%9A%84Blockquote%E3%80%82%0D%0A%0D%0A%2A%20%E6%9C%80%E5%90%8E%E6%98%AF%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%89%E9%A1%B9%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>结果将如下所示：</p>
+
+            <ul class="browser-default">
+                <li>这是列表中的第一个元素。</li>
+                <li>
+                    <p>这是列表中的第二个元素。</p>
+                    <blockquote>
+                        <p>列表中间的Blockquote。</p>
+                    </blockquote>
+                </li>
+                <li>这是列表上的第三项。</li>
+            </ul>
+
+
+            <h3 id="lists-code-block">代码块</h3>
+
+            <p>在列表中插入代码块时，将其缩进八个空格或两个制表符。</p>
+
+            <p>以下是列表中包含代码块的示例。</p>
+
+            <div class="language-text highlighter-rouge">
+                <div class="highlight">
+                    <div class="code-example">
+	<pre class="lang-markdown"><code>1. 让我们首先打开我们的index.html文件。
+2. 找到如下所示的代码块：
+
+        &lt;html&gt;
+            &lt;head&gt;
+            &lt;title&gt;我的网站标题&lt;/title&gt;
+        &lt;/head&gt;
+
+3. 更改页面标题。</code></pre>
+	<a href="/bianji/?markdown=1%2E%20%E8%AE%A9%E6%88%91%E4%BB%AC%E9%A6%96%E5%85%88%E6%89%93%E5%BC%80%E6%88%91%E4%BB%AC%E7%9A%84index%2Ehtml%E6%96%87%E4%BB%B6%E3%80%82%0D%0A2%2E%20%E6%89%BE%E5%88%B0%E5%A6%82%E4%B8%8B%E6%89%80%E7%A4%BA%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%EF%BC%9A%0D%0A%0D%0A%20%20%20%20%20%20%20%20<html>%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20<head>%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20<title>%E6%88%91%E7%9A%84%E7%BD%91%E7%AB%99%E6%A0%87%E9%A2%98<%2Ftitle>%0D%0A%20%20%20%20%20%20%20%20<%2Fhead>%0D%0A%0D%0A3%2E%20%E6%9B%B4%E6%94%B9%E9%A1%B5%E9%9D%A2%E6%A0%87%E9%A2%98%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+                </div>
+            </div>
+
+            <p>结果看起来像这样：</p>
+
+            <ol>
+                <li>让我们首先打开我们的index.html文件。</li>
+                <li>
+                    <p>找到如下所示的代码块：</p>
+                    <pre class="lang-html"><code>&lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;我的网站标题&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+                </li>
+                <li>更改页面标题。</li>
+            </ol>
+
+            <p>请注意，即使在元素之间插入了代码块，列表的数字顺序也没有改变。</p>
+
+            <h3 id="lists-images">图片</h3>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>1. 首先打开Markdown徽标文件。
+2. 请参阅屏幕上的Markdown徽标。
+
+    ![Markdown徽标](https://markdown.net.br/assets/img/basic-syntax/markdown-logo-small.png)
+
+3. 您现在可以关闭文件。</code></pre>
+	<a href="/bianji/?markdown=1%2E%20%E9%A6%96%E5%85%88%E6%89%93%E5%BC%80Markdown%E5%BE%BD%E6%A0%87%E6%96%87%E4%BB%B6%E3%80%82%0D%0A2%2E%20%E8%AF%B7%E5%8F%82%E9%98%85%E5%B1%8F%E5%B9%95%E4%B8%8A%E7%9A%84Markdown%E5%BE%BD%E6%A0%87%E3%80%82%0D%0A%0D%0A%20%20%20%20%21[Markdown%E5%BE%BD%E6%A0%87]%28https:%2F%2Fmarkdown%2Enet%2Ebr%2Fassets%2Fimg%2Fbasic%2Dsyntax%2Fmarkdown%2Dlogo%2Dsmall%2Epng%29%0D%0A%0D%0A3%2E%20%E6%82%A8%E7%8E%B0%E5%9C%A8%E5%8F%AF%E4%BB%A5%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>HTML中的呈现如下所示：</p>
+
+            <ol>
+                <li>首先打开Markdown徽标文件。</li>
+                <li>
+                    <p>请参阅屏幕上的Markdown徽标。</p>
+                    <div class="image-container">
+                        <img src="https://markdown.net.br/assets/img/basic-syntax/markdown-logo-small.png" alt="Markdown徽标">
+                    </div>
+                </li>
+                <li>您现在可以关闭文件。</li>
+            </ol>
+
+
+            <h2 id="code">代码</h2>
+
+            <p>使用Markdown，我们可以使用反引号<code class="lang-text">`</code>将部分内容划分为代码。在将由Markdown处理器解释为代码的文本之前和之后放置反引号。</p>
+
+            <p class="mt-60"><b>例子:</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>`代码`.</code></pre>
+	<a href="/bianji/?markdown=`%E4%BB%A3%E7%A0%81`%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;code&gt;代码.&lt;/code&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <code class="lang-text">代码</code>
+                </div>
+            </div>
+
+            <h3 id="escaping-backticks">逃避主干</h3>
+
+            <p>您可能会遇到以下情况。</p>
+
+            <p>您打算将代码格式应用到的内容已经包含反引号。或者，如果您想使用反引号突出显示代码本身内的部分文本。</p>
+
+            <p>要进行翻译，您需要在代码分界中放置一个引号，而不要将该引号解释为Markdown标记。</p>
+
+            <p>解决方案很简单，复制代码段的开头和结尾。</p>
+
+            <p class="mt-60"><b>例子</b></p>
+
+            <div class="code-comparison">
+                <p><i class="fab fa-markdown"></i>&nbsp;&nbsp;<b>Markdown</b></p>
+                <div class="code-example">
+	<pre class="lang-markdown"><code>``在代码标记内使用`crase`。``</code></pre>
+	<a href="/bianji/?markdown=``%E5%9C%A8%E4%BB%A3%E7%A0%81%E6%A0%87%E8%AE%B0%E5%86%85%E4%BD%BF%E7%94%A8`crase`%E3%80%82``" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+                <p><i class="fab fa-html5""></i>&nbsp;&nbsp;<b>HTML</b></p>
+                <pre class="lang-html"><code>&lt;code&gt;在代码标记内使用`crase`。&lt;/code&gt;</code></pre>
+
+                <p><i class="far fa-window-maximize"></i>&nbsp;&nbsp;<b>结果</b></p>
+                <div class="code-sample">
+                    <p>在代码标记内使用`crase`。</p>
+                </div>
+            </div>
+
+
+            <h3 id="code-block">代码块</h3>
+
+            <p>Markdown允许我们通过缩进4个空格或一个制表符来创建代码块。</p>
+
+            <p>请参见以下示例：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>    &lt;html&gt;
+        &lt;head&gt;
+        &lt;/head&gt;
+    &lt;/html&gt;</code></pre>
+	<a href="/bianji/?markdown=%20%20%20%20<html>%0D%0A%20%20%20%20%20%20%20%20<head>%0D%0A%20%20%20%20%20%20%20%20<%2Fhead>%0D%0A%20%20%20%20<%2Fhtml>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>结果：</p>
+
+            <pre class="lang-html"><code>&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+&lt;/html&gt;</code></pre>
+
+            <p>使用Markdown的扩展语法，我们可以在不缩进空格的情况下创建代码块，为此，我们需要使用<a href="/kuozhan-yufa/#fenced-code-block">环绕的代码块</a>标签。</p>
+
+            <h2 id="horizontal-rule">水平线</h2>
+
+            <p>连续三个星号<code class="lang-text">***</code>，或三个破折号<code class="lang-text">---</code>，或三个下划线<code class="lang-text">___</code>创建一条水平线。</p>
+
+            <p>一行必须仅包含那些字符，以便Markdown处理器正确解释水平线。</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>***
+
+---
+
+_________________</code></pre>
+	<a href="/bianji/?markdown=%2A%2A%2A%0D%0A%0D%0A%2D%2D%2D%0D%0A%0D%0A_________________" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>使用任何字符，结果将相同，请参见下文。</p>
+
+            <hr>
+
+            <blockquote><b>注意</b>：不必规定创建行的最大字符数，只要使用至少3个字符且该行仅包含这些字符，就可以输入任意数量的字符。</blockquote>
+
+
+            <h3 id="horizontal-rule-best-practices">水平线：最佳做法</h3>
+
+            <p>始终在水平线标记之前和之后添加空白行。由于用于创建标题的备用语法，因此这是必需的，如果将三个破折号<code class="lang-text">---</code>放在内容行的正下方，则将其解释为2级标题。</p>
+
+            <p><a href="#table-1-18">表1.18</a>以正确的方式例示了水平线的创建。</p>
+
+            <table class="responsive-table" id="table-1-18">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;正确的</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;不建议</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            在创建水平线之前，请务必先留空行。<br><br>
+                            ---<br><br>
+                            在创建水平线后添加空白行。
+                        </td>
+                        <td>
+                            如果未在水平线之前放置空白行，则此内容将被解释为2级标题。<br>
+                            ---<br>
+                            水平线后的空白线在哪里？
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">表1.18-在Markdown中构建水平线的正确方法。</small>
+
+
+
+            <h2 id="links">Links</h2>
+
+            <p>Links用于在文档各部分之间创建链接。在为Web甚至PDF文件创建页面时，能够插入links是编辑这些类型的文档必不可少的功能之一。</p>
+
+            <p>在Markdown中创建links的基本语法如下：</p>
+
+            <ul class="collection">
+                <li class="collection-item green lighten-5">将表示link的文本放在方括号中，例如：<br><code class="lang-text">[世界上最好的Markdown网站]</code>.</li>
+                <li class="collection-item yellow lighten-5">然后，必须在括号中加上link的地址（也称为URL），例如：<br><code class="lang-text">(https://markdown.net.br)</code></li>
+            </ul>
+
+            <p>全部放在一起。</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>访问 [世界上最好的Markdown网站](https://markdown.net.br).</code></pre>
+	<a href="/bianji/?markdown=%E8%AE%BF%E9%97%AE%20[%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%9A%84Markdown%E7%BD%91%E7%AB%99]%28https:%2F%2Fmarkdown%2Enet%2Ebr%29%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>并在HTML中输出。</p>
+
+            <p>访问<a href="https://markdown.net.br" target="_blank">世界上最好的Markdown网站</a></p>
+
+            <h3 id="links-adding-titles">添加标题</h3>
+
+            <p>如果您对HTML有一点经验，您就会知道，当用户将mouse放置在页面上的idsihABLEp上时，通常会向用户显示一个描述link用途的小标签。</p>
+
+            <p>该标签是link的标题，要使用Markdown创建标签，只需在括号内在URL后面加引号的文本即可。</p>
+
+            <p>例子：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>访问 [世界上最好的Markdown网站](https://markdown.net.br "Markdown的权威参考。").</code></pre>
+	<a href="/bianji/?markdown=%E8%AE%BF%E9%97%AE%20[%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%9A%84Markdown%E7%BD%91%E7%AB%99]%28https:%2F%2Fmarkdown%2Enet%2Ebr%20%22Markdown%E7%9A%84%E6%9D%83%E5%A8%81%E5%8F%82%E8%80%83%E3%80%82%22%29%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>在HTML中退出，将mouse放在link上方，然后看标题出现。</p>
+
+            <p>访问 <a href="https://markdown.net.br" title="Markdown的权威参考。" target="_blank">世界上最好的Markdown网站</a></p>
+
+
+            <h3 id="urls-email">URLs和email地址</h3>
+
+            <p>Você também pode transformar uma URL em link automaticamente colocando-a entre os sinais de menor que <code class="lang-text">&lt;</code> e maior que <code class="lang-text">&gt;</code>.</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&lt;https://markdown.net.br&gt;
+&lt;email@host.com&gt;</code></pre>
+	<a href="/bianji/?markdown=<https:%2F%2Fmarkdown%2Enet%2Ebr>%0D%0A<email@host%2Ecom>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>结果看起来像这样：</p>
+
+            <p><a href="https://markdown.net.br/" target="_blank">https://markdown.net.br</a><br>
+                <a href="mailto:email@exemplo.com.br">email@host.com</a>
+            </p>
+
+            <h3 id="links-emphasis">强调links</h3>
+
+            <p>通过在link格式周围（即方括号之前和括号之后）添加星号，可以向Markdown处理器指示应强调该link。</p>
+
+            <p>例如：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>访问网站: *[Markdown参考](https://markdown.net.br)*.
+我推荐搜索引擎: **[Duck Duck GO](https://duckduckgo.com/)**.</code></pre>
+	<a href="/bianji/?markdown=%E8%AE%BF%E9%97%AE%E7%BD%91%E7%AB%99:%20%2A[Markdown%E5%8F%82%E8%80%83]%28https:%2F%2Fmarkdown%2Enet%2Ebr%29%2A%2E%0D%0A%E6%88%91%E6%8E%A8%E8%8D%90%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E:%20%2A%2A[Duck%20Duck%20GO]%28https:%2F%2Fduckduckgo%2Ecom%2F%29%2A%2A%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>HTML中的输出如下所示：</p>
+
+            <p>访问网站: <a href="https://markdown.net.br" target="_blank">Markdown参考</a>
+                <br>
+                我推荐搜索引擎： <a href="https://duckduckgo.com/" target="_blank">Duck Duck GO</a>.
+            </p>
+
+            <p>您还可以使用代码格式突出显示link。</p>
+
+            <p>例子：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>查看部分: [`代码`](#code).</code></pre>
+	<a href="/bianji/?markdown=%E6%9F%A5%E7%9C%8B%E9%83%A8%E5%88%86:%20[`%E4%BB%A3%E7%A0%81`]%28%23code%29%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>结果：</p>
+
+            <p>查看以下部分： <a href="#code"><code class="lang-markdown">代码</code></a></p>
+
+            <h3 id="links-reference">参考样式Links</h3>
+
+            <p>Markdown提供了用于创建links的另一种语法，该语法允许您更清晰地查看文档。</p>
+
+            <p>使用此语法，您可以将要转换为idsihablep的文本放在该段落的中间，而只需一个引用，在文档末尾，请使用与以前相同的引用添加所有links。</p>
+
+            <blockquote><b>注意</b>：您可以将link参考放置在文档中的任何位置，出于组织原因，我建议在最后将其引用。</blockquote>
+
+            <p>由于此参考ID的创建分为两个部分，因此我们将对其进行分析。</p>
+
+            <h3 id="links-formatting-first-part">link的第一部分</h3>
+
+            <p>首先，我们将创建两组方括号，第一个地方是link地址的文本，也就是说，该文本将出现在页面上，第二个地方是一个标签，该标签将用作link地址的参考：</p>
+
+            <pre class="lang-markdown"><code>[Markdown - Wikipedia][1]</code></pre>
+
+            <blockquote><b>注意</b>：位于第二对方括号内的参考link标签可以是任何东西，数字，单词，短语，甚至可以包含标点符号，只要您参考idsihABLEp即可，该文件的末尾是相同的。</blockquote>
+
+            <p>例子：</p>
+
+            <pre class="lang-markdown"><code>[Markdown - Wikipedia][wiki_markdown.1]
+[约翰·格鲁伯（John Gruber）的官方网站][JOHN GRUBER]</code></pre>
+
+            <blockquote><b>注意</b>：参考标签也不区分大小写，即wiki_markdown与WIKI_MARKDOWN相同。</blockquote>
+
+
+            <h3 id="links-formatting-second-part">link的第二部分</h3>
+
+            <p>第二部分指出了link指向的位置，即idsihABLEp的过时。</p>
+
+            <p>要设置link的第二部分，我们必须具备以下条件：</p>
+
+            <ol>
+                <li>您之前在文档中创建的有效link参考标签，将其括在方括号中，后跟冒号和至少一个空格（例如<code class="lang-markdown">[label]：</code>）。</li>
+                <li>O endereço do link, opcionalmente essa URL pode estar entre os sinais de menor que <code class="lang-text">&lt;</code> e maior que <code class="lang-text">&gt;</code>.</li>
+                <li>link的标题用引号""<code class="lang-plaintext"><code class=</code>lang-plaintext">，单引号</code>""或括号<code class="lang-plaintext">（）</code>表示，当然，标题是可选的。</li>
+            </ol>
+
+            <p>以下所有示例对于格式化第二部分均有效：</p>
+
+            <pre class="lang-markdown"><code>[1]: https://en.wikipedia.org/wiki/Markdown
+[1]: https://en.wikipedia.org/wiki/Markdown "Markdown - Wikipedia"
+[1]: https://en.wikipedia.org/wiki/Markdown 'Markdown - Wikipedia'
+[1]: https://en.wikipedia.org/wiki/Markdown (Markdown - Wikipedia)
+[1]: &lt;https://en.wikipedia.org/wiki/Markdown&gt; "Markdown - Wikipedia"
+[1]: &lt;https://en.wikipedia.org/wiki/Markdown&gt; 'Markdown - Wikipedia'
+[1]: &lt;https://en.wikipedia.org/wiki/Markdown&gt; (Markdown - Wikipedia)</code></pre>
+
+
+            <p>我再次指出，您可以将link的第二部分放在文档中的任何位置，出于组织原因，我将其添加到文件的末尾</p>
+
+
+            <h3 id="links-all-together">将所有零件放在一起</h3>
+
+            <p>在这里，我将向您介绍使用参考links可以使Markdown文档更易于阅读的情况。</p>
+
+            <p>假设您需要将一个或多个links添加到网站，其中包含有关该段内容的更多信息。</p>
+
+            <p>在Markdown中，它看起来像这样：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>要了解更多信息，请查阅Markdown的本文： [Wikipedia](https://en.wikipedia.org/wiki/Markdown "Markdown - Wikipedia"). 或语言文档： [John Gruber](https://daringfireball.net/projects/markdown/ "Markdown的原始文档。").</code></pre>
+	<a href="/bianji/?markdown=%E8%A6%81%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E9%98%85Markdown%E7%9A%84%E6%9C%AC%E6%96%87%EF%BC%9A%20[Wikipedia]%28https:%2F%2Fen%2Ewikipedia%2Eorg%2Fwiki%2FMarkdown%20%22Markdown%20%2D%20Wikipedia%22%29%2E%20%E6%88%96%E8%AF%AD%E8%A8%80%E6%96%87%E6%A1%A3%EF%BC%9A%20[John%20Gruber]%28https:%2F%2Fdaringfireball%2Enet%2Fprojects%2Fmarkdown%2F%20%22Markdown%E7%9A%84%E5%8E%9F%E5%A7%8B%E6%96%87%E6%A1%A3%E3%80%82%22%29%2E" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>请注意，在段落本身中添加links可能会使文本更难以阅读，尤其是在阅读该文本的人不知道Markdown的情况下。</p>
+
+            <p>由于links对于该段落的上下文很重要，因此我们无法删除它们，但是有一种更有效的方法使用参考links来清理该段落。</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>要了解更多信息，请查阅Markdown的本文： [Wikipedia][1]. 或语言文档： [John Gruber][2].
+
+[1]: &lt;https://en.wikipedia.org/wiki/Markdown&gt; "Markdown - Wikipedia"
+[2]: https://daringfireball.net/projects/markdown/ "Markdown的原始文档。"</code></pre>
+	<a href="/bianji/?markdown=%E8%A6%81%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E9%98%85Markdown%E7%9A%84%E6%9C%AC%E6%96%87%EF%BC%9A%20[Wikipedia][1]%2E%20%E6%88%96%E8%AF%AD%E8%A8%80%E6%96%87%E6%A1%A3%EF%BC%9A%20[John%20Gruber][2]%2E%0D%0A%0D%0A[1]:%20<https:%2F%2Fen%2Ewikipedia%2Eorg%2Fwiki%2FMarkdown>%20%22Markdown%20%2D%20Wikipedia%22%0D%0A[2]:%20https:%2F%2Fdaringfireball%2Enet%2Fprojects%2Fmarkdown%2F%20%22Markdown%E7%9A%84%E5%8E%9F%E5%A7%8B%E6%96%87%E6%A1%A3%E3%80%82%22" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <blockquote><b>NOTA</b>: A colocação do sinal de menor que <code class="lang-text">&lt;</code> e de maior que <code class="lang-text">&gt;</code> ao redor do link é opcional.</blockquote>
+
+            <p>上面的两种格式会在HTML中产生idênticas结果：</p>
+
+            <p>要了解更多信息，请查阅Markdown的本文： <a href="https://en.wikipedia.org/wiki/Markdown" title="Markdown - Wikipedia" target="_blank">Wikipedia</a>. 或语言文档： <a href="https://daringfireball.net/projects/markdown/" title="Markdown的原始文档。" target="_blank">John Gruber</a>.</p>
+
+            <h3 id="links-best-practices">参考Links：最佳做法</h3>
+
+            <p>在某些情况下，您可能会在URLs中遇到空白，这可能会成为问题，具体取决于Markdown应用程序。</p>
+
+            <p>为避免格式化异常，请使用编码的空白： <code class="lang-text">%20</code>.</p>
+
+            <p><a href="#table-1-19">表1.19</a>介绍了使用编码在URL中的空白格式。</p>
+
+            <table class="responsive-table" id="table-1-19">
+                <thead>
+                    <tr>
+                        <th class="green-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;正确的</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-up"></i></span>
+                        </th>
+                        <th class="red-text">
+                            <span class="hide-on-small-only"><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;不建议</span>
+                            <span class="hide-on-med-and-up"><i class="fas fa-thumbs-down"></i></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            [link](https://exemplo.com/my%20page)
+                        </td>
+                        <td>
+                            [link](https://exemplo.com/my page)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">表1.19-使用URLs中编码的空白空间的使用。</small>
+
+
+            <h2 id="images">图片</h2>
+
+            <p>Markdown用于添加图像的语法如下：</p>
+
+            <ol>
+                <li>感叹号: <code class="lang-text">!</code>.</li>
+                <li>方括号中图片的替代文字: <code class="lang-plaintext">[]</code></li>
+                <li>括号内图片的完整地址: <code class="lang-plaintext">()</code></li>
+                <li>引号中的可选标题，仍在括号中: <code class="lang-plaintext">( "")</code></li>
+            </ol>
+
+            <p>例子：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>![Markdown是世界上最简单的标记语言！](https://markdown.net.br/assets/img/markdown.jpg "Markdown徽标")</code></pre>
+	<a href="/bianji/?markdown=%21[Markdown%E6%98%AF%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%EF%BC%81]%28https:%2F%2Fmarkdown%2Enet%2Ebr%2Fassets%2Fimg%2Fmarkdown%2Ejpg%20%22Markdown%E5%BE%BD%E6%A0%87%22%29" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>转换为HTML如下所示：</p>
+
+            <div class="image-container">
+                <img src="https://markdown.net.br/assets/img/markdown.jpg" class="materialboxed" alt="Markdown是世界上最简单的标记语言！" title="Markdown徽标">
+            </div>
+
+
+            <h3 id="images-link">图片和Link</h3>
+
+            <p>要将图像用作idp，请执行以下操作：</p>
+
+            <ol>
+                <li>创建一个正常的link格式。</li>
+                <li>在引用您的文本的idsihablep格式的第一对方括号中，使用您刚刚学习的Markdown图像格式。</li>
+            </ol>
+
+            <p>例子：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>[![沙漠中的古代石头](https://markdown.net.br/assets/img/shiprock.jpg "Shiprock, New Mexico By Beau Rogers")](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)</code></pre>
+	<a href="/bianji/?markdown=[%21[%E6%B2%99%E6%BC%A0%E4%B8%AD%E7%9A%84%E5%8F%A4%E4%BB%A3%E7%9F%B3%E5%A4%B4]%28https:%2F%2Fmarkdown%2Enet%2Ebr%2Fassets%2Fimg%2Fshiprock%2Ejpg%20%22Shiprock%2C%20New%20Mexico%20By%20Beau%20Rogers%22%29]%28https:%2F%2Fwww%2Eflickr%2Ecom%2Fphotos%2Fbeaurogers%2F31833779864%2Fin%2Fphotolist%2DQv3rFw%2D34mt9F%2Da9Cmfy%2D5Ha3Zi%2D9msKdv%2Do3hgjr%2DhWpUte%2D4WMsJ1%2DKUQ8N%2DdeshUb%2DvssBD%2D6CQci6%2D8AFCiD%2DzsJWT%2DnNfsgB%2DdPDwZJ%2Dbn9JGn%2D5HtSXY%2D6CUhAL%2Da4UTXB%2DugPum%2DKUPSo%2DfBLNm%2D6CUmpy%2D4WMsc9%2D8a7D3T%2D83KJev%2D6CQ2bK%2DnNusHJ%2Da78rQH%2Dnw3NvT%2D7aq2qf%2D8wwBso%2D3nNceh%2DugSKP%2D4mh4kh%2DbbeeqH%2Da7biME%2Dq3PtTf%2DbrFpgb%2Dcg38zw%2DbXMZc%2DnJPELD%2Df58Lmo%2DbXMYG%2Dbz8AAi%2DbxNtNT%2DbXMYi%2DbXMY6%2DbXMYv%29" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>结果：</p>
+
+            <div class="image-container">
+                <a href="https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv" target="_blank"><img src="https://markdown.net.br/assets/img/shiprock.jpg" alt="沙漠中的古代石头" title="Shiprock, New Mexico By Beau Rogers"></a>
+            </div>
+
+
+            <h2 id="escaping-characteres">转义字符</h2>
+
+            <p>要在Markdown中转义一个字符，即在文档中按字面意义表示它，请在其前面插入一个反斜杠。</p>
+
+            <p>例子：</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>\* 星号前的反斜杠使Markdown处理器将该行解释为段落而不是列表的元素。</code></pre>
+	<a href="/bianji/?markdown=\%2A%20%E6%98%9F%E5%8F%B7%E5%89%8D%E7%9A%84%E5%8F%8D%E6%96%9C%E6%9D%A0%E4%BD%BFMarkdown%E5%A4%84%E7%90%86%E5%99%A8%E5%B0%86%E8%AF%A5%E8%A1%8C%E8%A7%A3%E9%87%8A%E4%B8%BA%E6%AE%B5%E8%90%BD%E8%80%8C%E4%B8%8D%E6%98%AF%E5%88%97%E8%A1%A8%E7%9A%84%E5%85%83%E7%B4%A0%E3%80%82" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>结果看起来像这样：</p>
+
+            <p>*星号前的反斜杠使Markdown处理器将这一行解释为段落而不是列表的元素。</p>
+
+            <h3 id="characteres-table">可以逃脱的角色</h3>
+
+            <p><a href="#table-1-20">表1.20</a>显示了可以使用反斜杠在Markdown中转义哪些字符: <code class="lang-text">\</code>.</p>
+
+            <table class="striped responsive-table" id="table-1-20">
+                <thead>
+                    <tr>
+                        <th>特点</th>
+                        <th>姓名</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>\</td>
+                        <td>反斜杠</td>
+                    </tr>
+                    <tr>
+                        <td>`</td>
+                        <td>反引号（另请参见<a href="#escaping-backticks">在代码块中转义反引号</a>）</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>星号</td>
+                    </tr>
+                    <tr>
+                        <td>_</td>
+                        <td>带下划线的</td>
+                    </tr>
+                    <tr>
+                        <td>{ }</td>
+                        <td>键</td>
+                    </tr>
+                    <tr>
+                        <td>[ ]</td>
+                        <td>方括号</td>
+                    </tr>
+                    <tr>
+                        <td>( )</td>
+                        <td>括弧</td>
+                    </tr>
+                    <tr>
+                        <td>#</td>
+                        <td>杂凑</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>加</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>减号</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>分数</td>
+                    </tr>
+                    <tr>
+                        <td>!</td>
+                        <td>感叹号</td>
+                    </tr>
+                    <tr>
+                        <td>|</td>
+                        <td>竖线（另请参见<a href="/kuozhan-yufa/#escaping-vertical-bars">转义表中的竖线</a>）</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <small class="caption">表1.20-可以使用反斜杠在Markdown中转义的字符。</small>
+
+            <h2 id="html">HTML和Markdown</h2>
+
+            <p>已有HTML经验的程序员有时会在同一文档中混合使用这两种语法，即HTML和Markdown。</p>
+
+            <p>HTML在诸如更改文档元素的属性（例如颜色，位置，大小等）之类的任务中很有用。</p>
+
+            <p>将tags HTML直接放在文档中。</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>**大胆的** &lt;em&gt;斜体&lt;/em&gt;</code></pre>
+	<a href="/bianji/?markdown=%2A%2A%E5%A4%A7%E8%83%86%E7%9A%84%2A%2A%20<em>%E6%96%9C%E4%BD%93<%2Fem>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+
+            <p>结果看起来像这样：</p>
+
+            <p><b>大胆的</b> <em>itálico</em></p>
+
+            <h3 id="html-best-practices">HTML和Markdown：最佳做法</h3>
+
+            <p>重要的是要注意，并非所有的Markdown处理器都与tags HTML兼容，在某些情况下，它们仅支持这些tags的子集。</p>
+
+            <p>反复试验可以是一种策略。尝试使用tags格式化内容，并检查HTML中的输出是否符合预期，或者，当然，请参阅应用程序的文档。</p>
+
+            <p>不要在HTML中缩进tags的行，无论是空格还是制表符都不要缩进，这会在转换时干扰元素的格式。</p>
+
+            <p>在块元素之前和之后插入空白行，例如: <code class="lang-html">&lt;div&gt;</code>, <code class="lang-html">&lt;table&gt;</code>, <code class="lang-html">&lt;pre&gt;</code>, <code class="lang-html">&lt;p&gt;</code>.</p>
+
+            <p>避免将Markdown元素放在tags HTML的内容中。</p>
+
+            <p>下面的代码尽管在某些编辑器中可以使用，但其语法混合在一起可能会导致格式问题。</p>
+
+            <div class="code-example">
+	<pre class="lang-markdown"><code>&lt;p&gt;斜体 **大胆的**&lt;/p&gt;</code></pre>
+	<a href="/bianji/?markdown=<p>%E6%96%9C%E4%BD%93%20%2A%2A%E5%A4%A7%E8%83%86%E7%9A%84%2A%2A<%2Fp>" target="_blank" class="test-code waves-effect waves-light btn orange darken-4 pr-25">
+	    <b>自己尝试</b>&nbsp;<i class="fas fa-external-link-alt outter-icon-code"></i>
+	</a>
+</div>
+        </div>
+    </div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>分享</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Markdown®基础知识：语法，用法和示例[逐步说明]" data-hashtags="markdown" data-url="https://zh-cn.markdown.net.br/jiben-yufa/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;分享到Twitter
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://zh-cn.markdown.net.br/jiben-yufa/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;在脸书上分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://zh-cn.markdown.net.br/jiben-yufa/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;分享到Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Markdown®基础知识：语法，用法和示例[逐步说明]" data-url="https://zh-cn.markdown.net.br/jiben-yufa/" data-subject="你好！好的？我发现此Markdown指南非常容易遵循，请在可能的情况下看看。希望对您有所帮助，待会见。" data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;通过电子邮件分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Markdown®基础知识：语法，用法和示例[逐步说明]" data-url="https://zh-cn.markdown.net.br/jiben-yufa/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;分享到Whatsapp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Markdown®基础知识：语法，用法和示例[逐步说明]" data-url="https://zh-cn.markdown.net.br/jiben-yufa/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;通过电报分享
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">跟随@CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, 版权所有。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://zh-cn.markdown.net.br/ruanjian/mark-text/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="Tutorial de Markdown™ completo para iniciantes com diversos exemplos de como usar a linguagem de marcação mais simples do mundo.">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zh-cn.markdown.net.br/ruanjian/mark-text/">
+    <meta property="og:title" content="Mark Text®上的Markdown™-Cheatsheet [完整表]">
+    <meta property="og:description" content="Tutorial de Markdown™ completo para iniciantes com diversos exemplos de como usar a linguagem de marcação mais simples do mundo.">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Mark Text®上的Markdown™-Cheatsheet [完整表]</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="搜索"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/rumen/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>介绍</a>
+  </li>
+  <li class="bold white">
+    <a href="/jiben-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>基本语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuozhan-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>扩展语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuaisu-cankao/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>快速参考</a>
+  </li>
+  <li class="bold white">
+    <a href="/ruanjian/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>工具</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>Mark Text</h1>
+              <h4 class="light">Mark Text是一个简单，优雅且开源的Markdown编辑器。</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a itemprop="item" href="/ruanjian/">
+<span itemprop="name">Markdown出版商</span>
+</a>
+<meta itemprop="position" content="2" />
+</li>
+<li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">Mark Text</span>
+<meta itemprop="position" content="3" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+  <div class="col s12">
+    <h2 id="intro">概述</h2>
+
+    <p>Mark Text为用户提供了几个有趣的选项。它支持用于导出文档的PDF和HTML格式；隐藏内容标记的实时编辑器；可以直接从编辑器复制文本而无需格式化，可以使用HTML或Markdown格式进行格式化。</p>
+
+    <p>尽管Mark Text是一个出色的Markdown编辑器，但它仍然存在一些缺点，可能会使新用户感到困惑。</p>
+
+    <p class="mv-40">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-3427355473051563"
+             data-ad-slot="3854885260"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </p>
+
+    <p>有时，程序中内容的外观与导出内容的外观不同，无论是HTML还是PDF。</p>
+
+    <p>另一个挫折是，如在<a href="/ruanjian/notion/">Notion</a>中一样，在应用程序自动进行转换后，难以在Markdown中编辑文本。</p>
+
+    <p>有关Mark Text的更多信息，请参见<a href="https：//marktext.app/" target="_blank">https：//marktext.app/</a>。</p>
+
+    <h2 id="markdown-support">Markdown在Mark Text上的支持</h2>
+
+    <p><a href="#table-1-1">表1.1</a>提供了有关在Mark Text中使用Markdown元素的重要信息。</p>
+
+    <table class="responsive-table" id="table-1-1">
+      <thead>
+        <tr>
+          <th>元素</th>
+          <th>支持</th>
+          <th>信息</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/jiben-yufa/#headings" target="_blank">职称</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#paragraphs" target="_blank">段落</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#line-break" target="_blank">换行</a></td>
+          <td class="green lighten-4">是的</td>
+          <td>如前所述，在Mark Text中断开行有明显的区别，在编辑器中按<code class="lang-plaintext">Enter</code>键可以使行断开，但是在将文档导出到HTML或PDF时，此中断将丢失，因此，请使用该行右边的空格或反斜杠<code class="lang-plaintext">\</code>。</td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#bold" target="_blank">大胆的</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#italics" target="_blank">斜体</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#blockquote" target="_blank">Blockquote</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#lists-ordered" target="_blank">有序列表</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#lists-unordered" target="_blank">无序列表</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#code" target="_blank">代码</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#horizontal-rule" target="_blank">水平线</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#links" target="_blank">Links</a></td>
+          <td class="green lighten-4">是的</td>
+          <td>关于渲染links，这里也存在差异。小于<code class="lang-plaintext"><</code>和大于<code class="lang-plaintext">></code>符号的使用实际上出现在Mark Text编辑器中，但是当文档导出到HTML或PDF时，这些符号消失并且link正确链接，因此这不是问题。</td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#images" target="_blank">图片</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-tables" target="_blank">桌子</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#fenced-code-block" target="_blank">围栏代码块</a></td>
+          <td class="green lighten-4">是的</td>
+          <td>Mark Text还提供了对突出显示代码块的编程语言的支持。</td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-footnotes" target="_blank">脚注</a></td>
+          <td class="red lighten-4">不</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-title-id" target="_blank">标题编号</a></td>
+          <td class="red lighten-4">不</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-definition-lists" target="_blank">定义清单</a></td>
+          <td class="red lighten-4">不</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-strikethrough" target="_blank">删除线</a></td>
+          <td class="green lighten-4">是的</td>
+          <td>Mark Text与两种格式都兼容，使用两个瓦片<code class="lang-plaintext">~~ word ~~</code>和瓦片<code class="lang-plaintext">〜word〜</code>，在应用程序编辑器中仅使用两个瓦片<code class="lang-plaintext">〜 〜</code>，但是导出文档时，两种格式都可以使用。</td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-task-lists" target="_blank">任务清单</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#emojis-copy-and-paste" target="_blank">Emoji (复制和粘贴)</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#emojis-access-code" target="_blank">Emoji (存取码)</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-auto-link" target="_blank">来自URL的自动Link</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-disable-auto-link" target="_blank">禁用URL自动idp</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#html" target="_blank">HTML</a></td>
+          <td class="yellow lighten-4">是的</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="see-also">也看</h2>
+
+    <p><a href="https://github.com/marktext/marktext" target="_blank">GitHub上的Mark Text存储库</a></p>
+  </div> <!-- Fim do conteúdo principal -->
+</div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>分享</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Mark Text®上的Markdown™-Cheatsheet [完整表]" data-hashtags="markdown" data-url="https://zh-cn.markdown.net.br/ruanjian/mark-text/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;分享到Twitter
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://zh-cn.markdown.net.br/ruanjian/mark-text/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;在脸书上分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://zh-cn.markdown.net.br/ruanjian/mark-text/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;分享到Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Mark Text®上的Markdown™-Cheatsheet [完整表]" data-url="https://zh-cn.markdown.net.br/ruanjian/mark-text/" data-subject="你好！好的？我发现此Markdown指南非常容易遵循，请在可能的情况下看看。希望对您有所帮助，待会见。" data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;通过电子邮件分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Mark Text®上的Markdown™-Cheatsheet [完整表]" data-url="https://zh-cn.markdown.net.br/ruanjian/mark-text/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;分享到Whatsapp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Mark Text®上的Markdown™-Cheatsheet [完整表]" data-url="https://zh-cn.markdown.net.br/ruanjian/mark-text/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;通过电报分享
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">跟随@CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, 版权所有。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

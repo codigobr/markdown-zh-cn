@@ -1,0 +1,473 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://zh-cn.markdown.net.br/ruanjian/reddit/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="针对初学者的完整Markdown™教程，其中包含有关如何使用世界上最简单的标记语言的几个示例。">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zh-cn.markdown.net.br/ruanjian/reddit/">
+    <meta property="og:title" content="Reddit®和Markdown™-格式参考[Cheatsheet]">
+    <meta property="og:description" content="针对初学者的完整Markdown™教程，其中包含有关如何使用世界上最简单的标记语言的几个示例。">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Reddit®和Markdown™-格式参考[Cheatsheet]</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="搜索"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/rumen/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>介绍</a>
+  </li>
+  <li class="bold white">
+    <a href="/jiben-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>基本语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuozhan-yufa/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>扩展语法</a>
+  </li>
+  <li class="bold white">
+    <a href="/kuaisu-cankao/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>快速参考</a>
+  </li>
+  <li class="bold white">
+    <a href="/ruanjian/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>工具</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>Reddit</h1>
+              <h4 class="light">Reddit是一个非常受欢迎的internet网站/论坛，用户可以在其中发布社区中的各种主题。</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a itemprop="item" href="/ruanjian/">
+<span itemprop="name">Markdown出版商</span>
+</a>
+<meta itemprop="position" content="2" />
+</li>
+<li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">Reddit</span>
+<meta itemprop="position" content="3" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+  <div class="col s12">
+    <h2 id="intro">概述</h2>
+
+    <p>Reddit有其自己的Markdown处理器，称为<code class="lang-plaintext">snoomark</code>。该网站基于GFM（GitHub-flavored Markdown）开发了该处理器。</p>
+
+    <p>来自Reddit的Markdown处理器被称为Reddit-flavored Markdown。</p>
+
+    <p class="mv-40">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-3427355473051563"
+             data-ad-slot="3854885260"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </p>
+
+    <h2 id="habilitando-suporte">如何在Reddit编辑器中启用Markdown支持</h2>
+
+    <p>默认情况下，Reddit中不支持Markdown插入新帖子。</p>
+
+    <p>要在Reddit中启用Markdown支持，请单击位于编辑器右上角的link <code class="lang-plaintext">Switch to Markdown</code>。</p>
+
+    <p>见下图：</p>
+
+    <div class="image-container mt-60">
+    	<img src="https://markdown.net.br/assets/img/reddit-window.png" class="materialboxed" alt="在Reddit编辑器中激活Markdown！" title="在Reddit编辑器中激活Markdown！">
+    </div>
+
+    <p>使用相同的link，您可以切换到Rich Text编辑器，反之亦然。</p>
+
+    <p>要使Markdown编辑器成为Reddit的默认编辑器，请检查位于以下位置的<code class="lang-plaintext">Default to Markdown</code>选项:  <code class="lang-plaintext">User Settings > Feed Settings</code>.</p>
+
+    <p class="mv-40">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-3427355473051563"
+             data-ad-slot="3854885260"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </p>
+
+    <p>从现在开始，所有文章，包括评论，都可以使用Markdown格式语法来完成。</p>
+
+    <p>访问Reddit网站，网址为<a href="https://www.reddit.com/" target="_blank">https://www.reddit.com/</a>。</p>
+
+    <h2 id="markdown-support">Markdown对Reddit的支持</h2>
+
+    <p><a href="#table-1-1">表1.1</a>表示与Reddit兼容的元素，以及有关如何使用它们的一些注释。</p>
+
+    <table class="responsive-table" id="table-1-1">
+      <thead>
+        <tr>
+          <th>元素</th>
+          <th>支持</th>
+          <th>信息</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/jiben-yufa/#headings" target="_blank">职称</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#paragraphs" target="_blank">段落</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#line-break" target="_blank">换行</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#bold" target="_blank">大胆的</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#italics" target="_blank">斜体</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#blockquote" target="_blank">Blockquote</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#lists-ordered" target="_blank">有序列表</a></td>
+          <td class="green lighten-4">是的</td>
+          <td>要在Reddit编辑器中构建有序列表，请从数字1开始。您可以使用括号定界列表的元素而不是句点，即<code class="lang-plaintext">1）</code>代替<code class="lang-plaintext">1。</code>。</td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#lists-unordered" target="_blank">无序列表</a></td>
+          <td class="yellow lighten-4">部分的</td>
+          <td>Reddit的Markdown编辑器不支持使用加号<code class="lang-plaintext">+</code>在无序列表中创建元素。</td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#code" target="_blank">代码</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#horizontal-rule" target="_blank">水平线</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#links" target="_blank">Links</a></td>
+          <td class="green lighten-4">是的</td>
+          <td>Reddit的Markdown编辑器允许插入包含空白的links。</td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#images" target="_blank">图片</a></td>
+          <td class="red lighten-4">不</td>
+          <td>不幸的是，不支持Markdown格式。要使用Reddit编辑器插入图像，必须切换到Rich Text模式。</td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-tables" target="_blank">桌子</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#fenced-code-block" target="_blank">围栏代码块</a></td>
+          <td class="green lighten-4">是的</td>
+          <td>Reddit编辑器不支持以Markdown格式突出显示源代码。</td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-footnotes" target="_blank">脚注</a></td>
+          <td class="red lighten-4">不</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-title-id" target="_blank">标题编号</a></td>
+          <td class="yellow lighten-4">部分的</td>
+          <td>Reddit的Markdown编辑器自动生成标题ids，用户无法指定自定义id。</td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-definition-lists" target="_blank">定义清单</a></td>
+          <td class="red lighten-4">不</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-strikethrough" target="_blank">删除线</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-task-lists" target="_blank">任务清单</a></td>
+          <td class="red lighten-4">不</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#emojis-copy-and-paste" target="_blank">Emoji (复制和粘贴)</a></td>
+          <td class="white lighten-4">未知</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#emojis-access-code" target="_blank">Emoji (存取码)</a></td>
+          <td class="white lighten-4">未知</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-auto-link" target="_blank">来自URL的自动Link</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/kuozhan-yufa/#markdown-disable-auto-link" target="_blank">禁用URL自动idp</a></td>
+          <td class="green lighten-4">是的</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/jiben-yufa/#html" target="_blank">HTML</a></td>
+          <td class="red lighten-4">不</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="elementos-adicionais">Reddit编辑器中的其他Markdown元素</h2>
+
+    <p><a href="#table-1-2">表1.2</a>显示Markdown的哪些其他元素与Reddit编辑器兼容。</p>
+
+    <table class="responsive-table" id="table-1-2">
+      <thead class="thead-light">
+        <tr>
+          <th>元素</th>
+          <th>Markdown</th>
+          <th>出口</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>扰流板</td>
+          <td><code>此文字将被隐藏: &gt;!spoilers!&lt;</code></td>
+          <td>此文字将被隐藏:</td>
+        </tr>
+        <tr>
+          <td>信封</td>
+          <td><code>^reddit 或者 ^(reddited).</code></td>
+          <td><sup>reddit</sup> 或者 <sup>reddited</sup></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="see-also">也看</h2>
+
+    <p><a href="https://www.reddit.com/wiki/markdown" target="_blank">Reddit: 使用Markdown</a></p>
+  </div> <!-- Fim do conteúdo principal -->
+
+</div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>分享</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Reddit®和Markdown™-格式参考[Cheatsheet]" data-hashtags="markdown" data-url="https://zh-cn.markdown.net.br/ruanjian/reddit/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;分享到Twitter
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://zh-cn.markdown.net.br/ruanjian/reddit/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;在脸书上分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://zh-cn.markdown.net.br/ruanjian/reddit/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;分享到Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Reddit®和Markdown™-格式参考[Cheatsheet]" data-url="https://zh-cn.markdown.net.br/ruanjian/reddit/" data-subject="你好！好的？我发现此Markdown指南非常容易遵循，请在可能的情况下看看。希望对您有所帮助，待会见。" data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;通过电子邮件分享
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Reddit®和Markdown™-格式参考[Cheatsheet]" data-url="https://zh-cn.markdown.net.br/ruanjian/reddit/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;分享到Whatsapp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Reddit®和Markdown™-格式参考[Cheatsheet]" data-url="https://zh-cn.markdown.net.br/ruanjian/reddit/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;通过电报分享
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">跟随@CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, 版权所有。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>
